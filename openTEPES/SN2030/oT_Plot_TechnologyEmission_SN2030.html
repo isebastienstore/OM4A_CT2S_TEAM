@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-b906a8494e86f4874ede45b7ea0cd072"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "Scenario", "type": "nominal"}, "column": {"field": "Period", "type": "nominal"}, "x": {"field": "Technology", "type": "nominal"}, "y": {"field": "MtCO2", "type": "quantitative"}}, "height": 400, "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-b906a8494e86f4874ede45b7ea0cd072": [{"Period": 2030, "Scenario": "sc01", "Technology": "P_Gas_CCGT", "MtCO2": 1.714113858031082}, {"Period": 2030, "Scenario": "sc01", "Technology": "P_Gas_OCGT", "MtCO2": 0.7786042304461118}, {"Period": 2030, "Scenario": "sc01", "Technology": "P_Oil", "MtCO2": 1.042509899422328}]}};
+      var embedOpt = {"renderer": "svg", "mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

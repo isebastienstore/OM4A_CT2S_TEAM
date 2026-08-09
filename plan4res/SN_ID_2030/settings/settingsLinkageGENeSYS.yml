@@ -1,0 +1,1018 @@
+##############################################################################
+# inputs for creating the GENeSYS-MOD IAMC data out of julia outputs
+##############################################################################
+
+debug: ['Variable Cost with fuel|']
+input_from_git: no
+Model: GENeSYS-MOD 4.0
+
+Scenarios:
+    ID_2030:
+        - ID_ID
+Scenario: 'ID_2030'
+years: [2025,2030,2035,2040,2045,2050]
+#outputpath: /home/ahmany/om4a/p4rdata/data/SN_ID_2030/IAMC/
+
+# LS : Louga Saint-Louis
+# FKK : Fatick, Kaolack, Kaffrine
+# ZS : Ziguinchor, Sédhiou
+# MTKK : Matam, Tambacounda, Kolda et Kédougou
+
+listregionsGET: ['World', 'Senegal', 'Dakar', 'Diourbel', 'Thies', 'LS', 'FKK', 'ZS', 'MTKK']
+aggregateregions:  []# how to aggregate regions in plan4res dataset
+global_region: World
+# regional partitions in plan4res (partitions are used for coupling constraints)
+partition:
+    Countries: ['Senegal']
+    Continent: ['World']
+Add_Map_Region:
+    World: World
+    GM: Gambie
+    MR: Mauritanie
+    ML: Mali
+    GN: Guinee
+    GW: Guinee-Bissau
+
+treat:
+    fixed_data: yes
+    hourly_data: no
+
+genesys_datafiles:
+    Scenario: ID_2030
+    input: 
+        inputfile: input_data_Senegal_ID_v2.xlsx
+        Sheets: 
+            - 'Sets'
+            - 'Par_CapitalCost'
+            - 'Par_CapitalCostStorage'
+            - 'Par_FixedCost'
+            - 'Par_AvailabilityFactor'
+            - 'Par_EmissionActivityRatio'
+            - 'Par_EmissionContentPerFuel'
+            - 'Par_InputActivityRatio'
+            - 'Par_OutputActivityRatio'
+            - 'Par_OperationalLife'
+            - 'Par_OperationalLifeStorage'
+            - 'Par_TechnologyFromStorage'
+            - 'Par_TechnologyToStorage'
+            - 'Par_TagTechnologyToSector'
+            - 'Par_TotalAnnualMaxCapacity'
+            - 'Par_TradeCapacityGrowthCosts'
+            - 'Par_TradeLossFactor'
+            - 'Par_StorageE2PRatio'
+    output:
+        capacity: 'output_capacity_Senegal_ID_ID_inv_run.csv'
+        annual_production: 'output_annual_production_Senegal_ID_ID_inv_run.csv'
+        timeseries_production: 'output_production_Senegal_ID_ID_inv_run.csv'
+        technology_costs: 'output_technology_costs_detailed_Senegal_ID_ID_inv_run.csv'
+        trade_capacity: 'output_trade_capacity_Senegal_ID_ID_inv_run.csv'
+
+# Regions
+#######################################
+# list of regions to get from data sources 
+
+# Mapping
+#######################################
+    timeseries:
+        xlsx: 'Hourly_Data_Senegal_v3.xlsx'
+        sheets:
+            'Final Energy|Electricity|Heat': 'TS_HEAT_LOW'
+            'Final Energy|Electricity|Other (excl. Heat, Transport, Cooking)': 'TS_LOAD'
+            'Final Energy|Electricity|Transportation': 'TS_MOBILITY_PSNG'
+            #'Final Energy|Electricity|Cooking': 'TS_COOKING'
+            'Electricity|Solar|PV|Rooftop|Commercial': 'TS_PV_AVG'
+            'Electricity|Solar|PV|Utility|Average': 'TS_PV_AVG'
+            'Electricity|Solar|PV|Utility|Inf': 'TS_PV_INF'
+            'Electricity|Solar|PV|Utility|Opt': 'TS_PV_OPT'
+            'Electricity|Wind|Offshore|Deep': 'TS_WIND_OFFSHORE_DEEP'
+            'Electricity|Wind|Offshore|Shallow': 'TS_WIND_OFFSHORE_SHALLOW'
+            'Electricity|Wind|Offshore|Transitional': 'TS_WIND_OFFSHORE'
+            'Electricity|Wind|Onshore|Avg': 'TS_WIND_ONSHORE_AVG'
+            'Electricity|Wind|Onshore|Opt': 'TS_WIND_ONSHORE_OPT'
+            'Electricity|Hydro|Run of River': 'TS_HYDRO_ROR'   
+# mappings for genesys-mod are
+StorageMappings:
+    S_PHS:
+        TechnoIAMC: 'Electricity|Hydro|Pumped Storage'
+        StorageRatio: 50
+    S_Battery_Li-Ion:
+        TechnoIAMC: 'Electricity|Battery|Lithium-Ion'
+        StorageRatio: 4
+    S_Battery_Redox:
+        TechnoIAMC: 'Electricity|Battery|Redox Flow'
+        StorageRatio: 4
+    S_CAES: 
+        TechnoIAMC: 'Electricity|Compressed Air'
+        StorageRatio: 16
+    S_Hydro_Large: 
+        TechnoIAMC: 'Electricity|Hydro|Reservoir'
+        StorageRatio: 3650
+TechnosMappings:
+    CHP_Biomass_Solid:
+        Emission: Yes
+        Sector: CHP
+        TechnoIAMC: 'Combined Heat and Power|Biomass|w/o CCS'
+    CHP_Biomass_Solid_CCS:
+        Emission: Yes
+        Sector: CHP
+        TechnoIAMC: 'Combined Heat and Power|Biomass|w/ CCS'
+    CHP_Coal_Hardcoal:
+        Emission: Yes
+        Sector: CHP
+        TechnoIAMC: 'Combined Heat and Power|Coal|Hard coal|w/o CCS'
+    CHP_Coal_Hardcoal_CCS:
+        Emission: Yes
+        Sector: CHP
+        TechnoIAMC: 'Combined Heat and Power|Coal|Hard coal|w/ CCS'
+    CHP_Coal_Lignite:
+        Emission: Yes
+        Sector: CHP
+        TechnoIAMC: 'Combined Heat and Power|Coal|Lignite|w/o CCS'
+    CHP_Coal_Lignite_CCS:
+        Emission: Yes
+        Sector: CHP
+        TechnoIAMC: 'Combined Heat and Power|Coal|Lignite|w/ CCS'
+    CHP_Gas_CCGT_Biogas:
+        Emission: 'No'
+        Sector: CHP
+        TechnoIAMC: 'Combined Heat and Power|Gas|Biomethane|CCGT|w/o CCS'
+    CHP_Gas_CCGT_Biogas_CCS:
+        Emission: 'No'
+        Sector: CHP
+        TechnoIAMC: 'Combined Heat and Power|Gas|Biomethane|CCGT|w/ CCS'
+    CHP_Gas_CCGT_Natural:
+        Emission: Yes
+        Sector: CHP
+        TechnoIAMC: 'Combined Heat and Power|Gas|Fossil|CCGT|w/o CCS'
+    CHP_Gas_CCGT_Natural_CCS:
+        Emission: Yes
+        Sector: CHP
+        TechnoIAMC: 'Combined Heat and Power|Gas|Fossil|CCGT|w/ CCS'
+    CHP_Gas_CCGT_SynGas:
+        Emission: 'No'
+        Sector: CHP
+        TechnoIAMC: 'Combined Heat and Power|Gas|Synthetic Methane|CCGT|w/o CCS'
+    CHP_Oil:
+        Emission: Yes
+        Sector: CHP
+        TechnoIAMC: 'Combined Heat and Power|Oil|w/o CCS'
+    CHP_WasteToEnergy:
+        Emission: 'No'
+        Sector: CHP
+        TechnoIAMC: 'Combined Heat and Power|Waste'
+    D_Battery_Li-Ion:
+        Emission: 'No'
+        Sector: Storages
+        TechnoIAMC: 'Electricity|Battery|Lithium-Ion'
+    D_Battery_Redox:
+        Emission: 'No'
+        Sector: Storages
+        TechnoIAMC: 'Electricity|Battery|Redox Flow'
+    D_CAES:
+        Emission: 'No'
+        Sector: Storages
+        TechnoIAMC: 'Electricity|Compressed Air'
+    D_PHS:
+        Emission: 'No'
+        Sector: Storages
+        TechnoIAMC: 'Electricity|Hydro|Pumped Storage'
+    D_PHS_Residual:
+        Emission: 'No'
+        Sector: Storages
+        TechnoIAMC: 'Electricity|Hydro|Pumped Storage Residual'
+        StorageRatio: 100
+    P_Biomass:
+        Emission: Yes
+        Sector: Power
+        TechnoIAMC: 'Electricity|Biomass|w/o CCS'
+    P_Biomass_CCS:
+        Emission: Yes
+        Sector: Power
+        TechnoIAMC: 'Electricity|Biomass|w/ CCS'
+    P_CSP:
+        Emission: 'No'
+        Sector: Power
+        TechnoIAMC: 'Electricity|Solar|CSP'
+    P_Coal_Hardcoal:
+        Emission: Yes
+        Sector: Power
+        TechnoIAMC: 'Electricity|Coal|Hard coal|w/o CCS'
+    P_Coal_Hardcoal_CCS:
+        Emission: Yes
+        Sector: Power
+        TechnoIAMC: 'Electricity|Coal|Hard coal|w/ CCS'
+    P_Coal_Lignite:
+        Emission: Yes
+        Sector: Power
+        TechnoIAMC: 'Electricity|Coal|Lignite|w/o CCS'
+    P_Coal_Lignite_CCS:
+        Emission: Yes
+        Sector: Power
+        TechnoIAMC: 'Electricity|Coal|Lignite|w/ CCS'
+    P_Gas_CCGT:
+        Emission: Yes
+        Sector: Power
+        TechnoIAMC: 'Electricity|Gas|CCGT|w/o CCS'
+        TechnosIAMCperFuel:
+            Gas_Natural: 'Electricity|Gas|Fossil|CCGT|w/o CCS'
+            Gas_Bio: 'Electricity|Gas|Biomethane|CCGT|w/o CCS'
+            Gas_Synth: 'Electricity|Gas|Synthetic methane|CCGT|w/o CCS'
+    P_Gas_CCS:
+        Emission: Yes
+        Sector: Power
+        TechnoIAMC: 'Electricity|Gas|CCGT|w/ CCS'
+        TechnosIAMCperFuel:
+            Gas_Natural: 'Electricity|Gas|Fossil|CCGT|w/ CCS'
+            Gas_Bio: 'Electricity|Gas|Biomethane|CCGT|w/ CCS'
+            Gas_Synth: 'Electricity|Gas|Synthetic methane|CCGT|w/ CCS'
+    P_Gas_Engines:
+        Emission: Yes
+        Sector: Power
+        TechnoIAMC: 'Electricity|Gas|w/o CCS'
+        TechnosIAMCperFuel:
+            Gas_Natural: 'Electricity|Gas|Fossil|Gas Engines'
+            Gas_Bio: 'Electricity|Gas|Biomethane|Gas Engines'
+            Gas_Synth: 'Electricity|Gas|Synthetic methane|Gas Engines'                        
+    P_Gas_OCGT:
+        Emission: Yes
+        Sector: Power
+        TechnoIAMC: 'Electricity|Gas|OCGT|w/o CCS'
+        TechnosIAMCperFuel:
+            Gas_Natural: 'Electricity|Gas|Fossil|OCGT|w/o CCS'
+            Gas_Bio: 'Electricity|Gas|Biomethane|OCGT|w/o CCS'
+            Gas_Synth: 'Electricity|Gas|Synthetic methane|OCGT|w/o CCS'
+    P_Geothermal:
+        Emission: 'No'
+        Sector: Power
+        TechnoIAMC: 'Electricity|Geothermal'
+    P_H2_OCGT:
+        Emission: 'No'
+        Sector: Power
+        TechnoIAMC: 'Electricity|Hydrogen|OCGT'
+    P_Hydro_Reservoir:
+        Emission: 'No'
+        Sector: Power
+        TechnoIAMC: 'Electricity|Hydro|Reservoir'
+    P_Hydro_RoR:
+        Emission: 'No'
+        Sector: Power
+        TechnoIAMC: 'Electricity|Hydro|Run of River'
+    P_Nuclear:
+        Emission: 'No'
+        Sector: Power
+        TechnoIAMC: 'Electricity|Nuclear'
+    P_Ocean:
+        Emission: 'No'
+        Sector: Power
+        TechnoIAMC: 'Electricity|Ocean'
+    P_Oil:
+        Emission: Yes
+        Sector: Power
+        TechnoIAMC: 'Electricity|Oil|w/o CCS'
+    P_PV_Rooftop_Commercial:
+        Emission: 'No'
+        Sector: Power
+        TechnoIAMC: 'Electricity|Solar|PV|Rooftop|Commercial'
+    P_PV_Rooftop_Residential:
+        Emission: 'No'
+        Sector: Power
+        TechnoIAMC: 'Electricity|Solar|PV|Rooftop|Residential'
+    P_PV_Utility_Avg:
+        Emission: 'No'
+        Sector: Power
+        TechnoIAMC: 'Electricity|Solar|PV|Utility'
+    P_PV_Utility_Inf:
+        Emission: 'No'
+        Sector: Power
+        TechnoIAMC: 'Electricity|Solar|PV|Utility'
+    P_PV_Utility_Opt:
+        Emission: 'No'
+        Sector: Power
+        TechnoIAMC: 'Electricity|Solar|PV|Utility'
+    P_PV_Utility_Tracking:
+        Emission: 'No'
+        Sector: Power
+        TechnoIAMC: 'Electricity|Solar|PV|Utility'
+    P_Wind_Offshore_Deep:
+        Emission: 'No'
+        Sector: Power
+        TechnoIAMC: 'Electricity|Wind|Offshore'
+    P_Wind_Offshore_Shallow:
+        Emission: 'No'
+        Sector: Power
+        TechnoIAMC: 'Electricity|Wind|Offshore'
+    P_Wind_Offshore_Transitional:
+        Emission: 'No'
+        Sector: Power
+        TechnoIAMC: 'Electricity|Wind|Offshore'
+    P_Wind_Onshore_Avg:
+        Emission: 'No'
+        Sector: Power
+        TechnoIAMC: 'Electricity|Wind|Onshore'
+    P_Wind_Onshore_Inf:
+        Emission: 'No'
+        Sector: Power
+        TechnoIAMC: 'Electricity|Wind|Onshore'
+    P_Wind_Onshore_Opt:
+        Emission: 'No'
+        Sector: Power
+        TechnoIAMC: 'Electricity|Wind|Onshore'
+    X_Fuel_Cell:
+        Emission: 'No'
+        Sector: Transformation
+        TechnoIAMC: 'Electricity|Hydrogen|Fuel Cell'
+    RES_CSP:
+        Emission: 'No'
+        Sector: Power
+        TechnoIAMC: Electricity|Solar|CSP
+    RES_Geothermal:
+        Emission: 'No'
+        Sector: Power
+        TechnoIAMC: Electricity|Geothermal
+    RES_Hydro_Small:
+        Emission: 'No'
+        Sector: Power
+        TechnoIAMC: Electricity|Hydro|Run of River
+    RES_Ocean:
+        Emission: 'No'
+        Sector: Power
+        TechnoIAMC: Electricity|Ocean
+    RES_PV_Rooftop_Residential:
+        Emission: 'No'
+        Sector: Power
+        TechnoIAMC: Electricity|Solar|PV|Rooftop|Residential
+    RES_PV_Utility_Avg:
+        Emission: 'No'
+        Sector: Power
+        TechnoIAMC: Electricity|Solar|PV|Utility
+    RES_PV_Utility_Inf:
+        Emission: 'No'
+        Sector: Power
+        TechnoIAMC: Electricity|Solar|PV|Utility
+    RES_PV_Utility_Tracking:
+        Emission: 'No'
+        Sector: Power
+        TechnoIAMC: Electricity|Solar|PV|Utility
+    RES_Wind_Offshore_Deep:
+        Emission: 'No'
+        Sector: Power
+        TechnoIAMC: Electricity|Wind|Offshore
+    RES_Wind_Offshore_Shallow:
+        Emission: 'No'
+        Sector: Power
+        TechnoIAMC: Electricity|Wind|Offshore
+    RES_Wind_Offshore_Transitional:
+        Emission: 'No'
+        Sector: Power
+        TechnoIAMC: Electricity|Wind|Offshore
+    RES_Wind_Onshore_Avg:
+        Emission: 'No'
+        Sector: Power
+        TechnoIAMC: Electricity|Wind|Onshore
+    RES_Wind_Onshore_Inf:
+        Emission: 'No'
+        Sector: Power
+        TechnoIAMC: Electricity|Wind|Onshore
+    RES_Hydro_Large:
+        Emission: 'No'
+        Sector: Power
+        TechnoIAMC: Electricity|Hydro|Reservoir
+    RES_PV_Rooftop_Commercial:
+        Emission: 'No'
+        Sector: Power
+        TechnoIAMC: Electricity|Solar|PV|Rooftop|Commercial
+    RES_PV_Utility_Opt:
+        Emission: 'No'
+        Sector: Power
+        TechnoIAMC: Electricity|Solar|PV|Utility
+    RES_Wind_Onshore_Opt:
+        Emission: 'No'
+        Sector: Power
+        TechnoIAMC: Electricity|Wind|Onshore
+    HLI_Fuelcell:
+        Emission: 'No'
+        Sector: Industry
+        TechnoIAMC: Electricity|Heat|FuelCell
+variables:
+    Final Energy|Electricity|Heating:
+        source: annual_production
+        unit: 'PJ/yr'
+        rules:
+            select:
+                Type:
+                    values: [Use]
+                Fuel:
+                    values: [Power]
+                Sector:
+                    values: [Buildings]
+            addvariablecol:
+            apply_abs:
+            group:
+                rule: sum
+            convert_unit: 
+                to: 'EJ/yr'
+                factor: 0.001
+    Final Energy|Electricity|Industry:
+        source: annual_production
+        unit: 'PJ/yr'
+        rules:
+            select:
+                Type:
+                    values: [Use]
+                Fuel:
+                    values: [Power]
+                Sector:
+                    values: [Industry]
+            addvariablecol:
+            apply_abs:
+            group:
+                rule: sum
+            convert_unit: 
+                to: 'EJ/yr'
+                factor: 0.001
+    Final Energy|Electricity|Transportation:
+        source: annual_production
+        unit: 'PJ/yr'
+        rules:
+            select:
+                Type:
+                    values: [Use]
+                Fuel:
+                    values: [Power]
+                Sector:
+                    values: [Transportation]
+            addvariablecol:
+            apply_abs:
+            group:
+                rule: sum
+            convert_unit: 
+                to: 'EJ/yr'
+                factor: 0.001
+    Final Energy|Electricity|Other (excl. Heating, Industry, Transportation): 
+        source: annual_production
+        unit: 'PJ/yr'
+        rules:
+            select:
+                Type:
+                    values: [Use]
+                Technology:
+                    values: [Demand]
+                Fuel:
+                    values: [Power]
+            addvariablecol:
+            apply_abs:
+            group:
+                rule: sum
+            convert_unit: 
+                to: 'EJ/yr'
+                factor: 0.001
+    Final Energy|Electricity|Heat:
+        source: internal
+        unit: 'PJ/yr'
+        rules:
+            compute:
+                ruleaggr: sum
+                from: ['Final Energy|Electricity|Industry','Final Energy|Electricity|Heating']
+    Final Energy|Electricity|Other:
+        source: internal
+        unit: 'PJ/yr'
+        rules:
+            compute:
+                ruleaggr: sum
+                from: ['Final Energy|Electricity|Industry','Final Energy|Electricity|Other (excl. Heating, Industry, Transportation)']
+    Final Energy|Electricity:
+        source: internal
+        unit: 'PJ/yr'
+        rules:
+            compute: 
+                from: ['Final Energy|Electricity|Other (excl. Heating, Industry, Transportation)','Final Energy|Electricity|Transportation','Final Energy|Electricity|Heating','Final Energy|Electricity|Industry']
+                ruleaggr: sum  
+    Network|Electricity|Maximum Flow:
+        source: trade_capacity
+        unit: GW
+        rules:
+            select:
+                Type:
+                    values: ['Power Transmissions Capacity']
+            create_interco:
+            addvariablecol:
+            convert_unit: 
+                to: 'MW'
+                factor: 1000
+    Network|Electricity|Expansion Cost:
+        source: trade_capacity
+        unit: 'million EUR/GW'
+        rules:
+            select:
+                Type:
+                    values: ['Transmission Expansion Costs in MEUR/GW']
+            create_interco:
+            addvariablecol:
+            convert_unit: 
+                to: 'EUR_2020/MW'
+                factor: 1000
+    Network|Electricity|Loss Factor:
+        source: input
+        sheets: [Par_TradeLossFactor]
+        unit: '-'
+        rules:
+            global: True
+            select:
+                Fuel:
+                    values: ['Power']
+            addvariablecol:
+    Secondary Energy without fuel|:
+        source: annual_production
+        unit: 'PJ/yr'
+        rules:
+            select:
+                Type:
+                    values: [Production]
+                Fuel:
+                    values: [Power]
+            selectAndMap:
+                column: Technology
+                mappings: [technos]
+                rule: sum
+            removefuel:
+            concatvariablename:   
+            group:
+                rule: sum
+            convert_unit: 
+                to: 'EJ/yr'
+                factor: 0.001
+            changevariablename:
+                newname: Secondary Energy|
+    Input Ratio|:
+        source: input
+        unit: '-'
+        sheets: [Par_InputActivityRatio]
+        rules:
+            selectAndMap:
+                columns: ['Technology','Fuel']
+                mappings: [technofuels]
+                rule: mean
+            concatvariablename:
+            global: True
+    Secondary Energy with fuel|:
+        source: annual_production
+        unit: 'PJ/yr'
+        rules:
+            select:
+                Type:
+                    values: [Use]
+                Sector:
+                    values: [Power]
+            selectAndMap:
+                columns: ['Technology','Fuel']
+                mappings: [technofuels]
+            apply_abs:
+            combinewithOtherVariable:
+                Input Ratio|:
+                    mapping: technofuels
+                    rule: divide
+            concatvariablename:   
+            convert_unit: 
+                to: 'EJ/yr'
+                factor: 0.001
+            changevariablename:
+                newname: Secondary Energy|
+    Capacity with fuel|:
+        source: capacity
+        unit: 'GW'
+        rules:
+            select:
+                Type:
+                    values: ['TotalCapacity']
+                Sector:
+                    values: ['Power','Storages','CHP']
+            selectAndMap:
+                column: Technology 
+                mappings: [technos]
+                rule: sum
+            duplicatefuels:
+            #combinewithOtherVariable:
+            #    Secondary Energy|:
+            #        mapping: technofuels
+            #        rule: weight
+            #        keep:
+            concatvariablename:
+            apply_abs:
+            group:
+                rule: sum
+            changevariablename:
+                newname: Capacity|
+    Capacity without fuel|:
+        source: capacity
+        unit: 'GW'
+        rules:
+            select:
+                Type:
+                    values: ['TotalCapacity']
+                Sector:
+                    values: ['Power','Storages','CHP']
+            selectAndMap:
+                column: Technology 
+                mappings: [technos]
+                rule: sum
+            removefuel:
+            concatvariablename:
+            apply_abs:
+            group:
+                rule: sum
+            changevariablename:
+                newname: Capacity|                    
+    Variable Cost with fuel|:
+        source: technology_costs
+        unit: 'million EUR/PJ'
+        rules:
+            select:
+                Type:
+                    values: ['Variable Costs [incl. Fuel Costs]']
+            selectAndMap:
+                columns: ['Technology','Fuel']
+                mappings: [technofuels]
+                rule: mean           
+            concatvariablename:
+            group:
+                rule: mean
+            changevariablename:
+                newname: Variable Cost|
+            convert_unit: 
+                to: 'EUR/MWh'
+                factor: 3.6   
+    Variable Cost without fuel|:
+        source: technology_costs
+        unit: 'million EUR/PJ'
+        rules:
+            select:
+                Type:
+                    values: ['Variable Costs [incl. Fuel Costs]']
+            selectAndMap:
+                column: Technology
+                mappings: [technos]
+                rule: mean           
+            removefuel:
+            concatvariablename:
+            group:
+                rule: mean
+            changevariablename:
+                newname: Variable Cost|
+            convert_unit: 
+                to: 'EUR/MWh'
+                factor: 3.6
+    Fixed Cost with fuel|:
+        source: input
+        unit: 'million EUR_2020/GW/yr'
+        sheets: [Par_FixedCost]
+        rules:
+            selectAndMap:
+                column: Technology
+                mappings: [technos]
+                rule: mean
+            duplicatefuels:
+            concatvariablename:
+            global: True
+            group:
+                rule: mean
+            convert_unit: 
+                to: 'EUR_2020/kW/yr'
+                factor: 1
+            changevariablename:
+                newname: Fixed Cost|
+    Fixed Cost without fuel|:
+        source: input
+        unit: 'million EUR_2020/GW/yr'
+        sheets: [Par_FixedCost]
+        rules:                                              
+            selectAndMap:
+                column: Technology
+                mappings: [technos]
+                rule: mean
+            removefuel:
+            concatvariablename:
+            global: True
+            group:
+                rule: mean
+            convert_unit: 
+                to: 'EUR_2020/kW/yr'
+                factor: 1
+            changevariablename:
+                newname: Fixed Cost|               
+    Capital Cost Storage|:
+        source: input
+        unit: 'million EUR_2020/PJ'
+        sheets: [Par_CapitalCostStorage]
+        rules:
+            selectAndMap:
+                column: Storage
+                mappings: [storages]
+                rule: mean
+            concatvariablename:
+            global: True
+            group:
+                rule: mean
+            convert_unit: 
+                to: 'EUR_2020/kW'
+                factor: 0.0036
+    Capital Cost Storage per Capacity|:
+        source: internal
+        unit: 'million EUR_2020/PJ'
+        rules:
+            compute:
+                #mapping: storages_ratios
+                mapping: StorageRatio
+                from: ['Capital Cost Storage|']
+                rulemap: mult
+            convert_unit: 
+                to: 'EUR_2020/kW'
+                factor: 0.0036
+    Capital Cost without Storage with fuel|:
+        source: input
+        unit: 'million EUR_2020/GW'
+        sheets: [Par_CapitalCost]
+        rules:
+            selectAndMap:
+                column: Technology
+                mappings: [technos]
+                rule: mean
+            duplicatefuels:
+            concatvariablename:            
+            global: True
+            group:
+                rule: mean
+            convert_unit: 
+                to: 'EUR_2020/kW'
+                factor: 1
+            changevariablename:
+                newname: Capital Cost without Storage|
+    Capital Cost without Storage without fuel|:
+        source: input
+        unit: 'million EUR_2020/GW'
+        sheets: [Par_CapitalCost]
+        rules:
+            selectAndMap:
+                column: Technology
+                mappings: [technos]
+                rule: mean
+            removefuel:
+            concatvariablename:            
+            global: True
+            group:
+                rule: mean
+            convert_unit: 
+                to: 'EUR_2020/kW'
+                factor: 1
+            changevariablename:
+                newname: Capital Cost without Storage|
+    Capital Cost|:
+        source: internal
+        unit: 'EUR_2020/kW'
+        rules:
+            compute:
+                ruleaggr: sum
+                mapping: IAMCtechnosWithFuels
+                from: ['Capital Cost without Storage|','Capital Cost Storage per Capacity|']
+            group:
+                rule: mean
+    Lifetime with fuel|:
+        source: input
+        unit: '-'
+        sheets: [Par_OperationalLife]
+        rules:
+            selectAndMap:
+                column: Technology
+                mappings: [technos]
+                rule: mean
+            duplicatefuels:
+            concatvariablename:
+            global: True
+            group:
+                rule: mean
+            addyear:
+            convert_unit: 
+                to: 'years'
+                factor: 1
+            changevariablename:
+                newname: Lifetime|
+    Lifetime without fuel|:
+        source: input
+        unit: '-'
+        sheets: [Par_OperationalLife]
+        rules:
+            selectAndMap:
+                column: Technology
+                mappings: [technos]
+                rule: mean
+            removefuel:
+            concatvariablename:
+            global: True
+            group:
+                rule: mean
+            addyear:
+            convert_unit: 
+                to: 'years'
+                factor: 1
+            changevariablename:
+                newname: Lifetime|
+    Emission Rate with fuel|CO2|:
+        source: input
+        unit: 'million tons/PJ'
+        sheets: [Par_EmissionActivityRatio]
+        rules:
+            select:
+                Mode_of_operation:
+                    values: [1]
+            selectFromMapping:
+                column: Technology
+                mappings: [emissions]
+            map:
+                column: Technology
+                rule: mean
+                mapping: technos
+            duplicatefuels:
+            combineWithOtherSources: 
+                mapAndAddCols:
+                    source: input
+                    sheet: Par_InputActivityRatio
+                    select:
+                        Mode_of_operation:
+                            values: [1,2,3]
+                    column: Technology
+                    mappings: 
+                        Fuel: Fuel
+                        InputActivityRatio: Value
+                    product_cols:
+                        Value: InputActivityRatio           
+            combineWithOtherSources: 
+                changeValue:
+                    source: input
+                    sheet: Par_EmissionContentPerFuel
+                    column: Fuel
+                    value: Value
+                    map: Fuel
+                    rule: mult 
+                group:
+                    rule: mean
+            concatvariablename:
+            global: True
+            convert_unit: 
+                to: 'tons/MWh'
+                factor: 3.6
+            group:
+                rule: mean
+            changevariablename:
+                newname: Emission Rate|CO2|
+    Emission Rate without fuel|CO2|:
+        source: input
+        unit: 'million tons/PJ'
+        sheets: [Par_EmissionActivityRatio]
+        rules:
+            select:
+                Mode_of_operation:
+                    values: [1]
+            selectFromMapping:
+                column: Technology
+                mappings: [emissions]
+            map:
+                column: Technology
+                rule: mean
+                mapping: technos
+            removefuel:
+            combineWithOtherSources: 
+                mapAndAddCols:
+                    source: input
+                    sheet: Par_InputActivityRatio
+                    select:
+                        Mode_of_operation:
+                            values: [1]
+                    column: Technology
+                    mappings: 
+                        Fuel: Fuel
+                        InputActivityRatio: Value
+                    product_cols:
+                        Value: InputActivityRatio
+                changeValue:
+                    source: input
+                    sheet: Par_EmissionContentPerFuel
+                    column: Fuel
+                    value: Value
+                    map: Fuel
+                    rule: mult 
+                group:
+                    rule: mean
+            concatvariablename:
+            global: True
+            convert_unit: 
+                to: 'tons/MWh'
+                factor: 3.6
+            changevariablename:
+                newname: Emission Rate|CO2|             
+    Maximum Storage|:
+        source: internal
+        unit: 'GW'
+        rules:
+            compute:
+                mapping: StorageRatio
+                from: ['Capacity|']
+                rulemap: mult
+            convert_unit: 
+                to: 'GWh'
+                factor: 1
+    Maximum Capacity with fuel|:
+        source: input
+        unit: 'GW'
+        sheets: [Par_TotalAnnualMaxCapacity]
+        rules:
+            selectAndMap:
+                column: Technology
+                mappings: [technos]
+                rule: sum
+            duplicatefuels:
+            concatvariablename:
+            group:
+                rule: sum
+            changevariablename:
+                newname: Maximum Capacity|
+    Maximum Capacity without fuel|:
+        source: input
+        unit: 'GW'
+        sheets: [Par_TotalAnnualMaxCapacity]
+        rules:
+            selectAndMap:
+                column: Technology
+                mappings: [technos]
+                rule: sum
+            removefuel:
+            concatvariablename:
+            group:
+                rule: sum
+            changevariablename:
+                newname: Maximum Capacity|
+    Maximum Utilization with fuel|:
+        source: input
+        unit: '-'
+        sheets: [Par_AvailabilityFactor]
+        rules:
+            selectAndMap:
+                column: Technology
+                mappings: [technos]
+                rule: mean
+            duplicatefuels:
+            concatvariablename:
+            group:
+                rule: mean
+            changevariablename:
+                newname: Maximum Utilization|
+    Maximum Utilization without fuel|:
+        source: input
+        unit: '-'
+        sheets: [Par_AvailabilityFactor]
+        rules:
+            selectAndMap:
+                column: Technology
+                mappings: [technos]
+                rule: mean
+            removefuel:
+            concatvariablename:
+            group:
+                rule: mean
+            changevariablename:
+                newname: Maximum Utilization|                    
+    Charging Efficiency|:
+        source: input
+        unit: '-'
+        sheets: [Par_TechnologyToStorage]
+        rules:
+            selectAndMap:
+                column: Technology
+                mappings: [technos]
+                rule: mean
+            global: True
+            concatvariablename:
+    Discharging Efficiency|: 
+        source: input
+        unit: '-'
+        sheets: [Par_TechnologyFromStorage]
+        rules: 
+            selectAndMap:
+                column: Technology
+                mappings: [technos]
+                rule: mean
+            global: True
+            concatvariablename:
+#removed_variables: ['Capital Cost Storage per Capacity|','Capital Cost Storage|','Capital Cost without Storage|']
+removed_variables: []
+Calendar:
+    dayfirst: True 
+    BeginTimeSeries: '01/01/2050  00:00:00'   # timescale where timeseries are available
+    EndTimeSeries: '31/12/2050  23:00:00'   # timescale where timeseries are available
+    TimeStep:  # duration of timesteps 
+        Unit: hours
+        Duration: 1
+TimeSeriesFactor: 
+    TS_MOBILITY_PSNG: 8760
+    TS_COOKING: 8760
+    TS_HEAT_LOW: 8760
+    TS_LOAD: normalize
+    TS_HYDRO_ROR: 8760

@@ -1,0 +1,534 @@
+Model,Scenario,Region,Variable,Unit,2030
+GENeSYS-MOD 4.0,ID_2030,Dakar,Capacity|Electricity|Gas|Fossil|CCGT|w/o CCS,MW,473.8244779183189
+GENeSYS-MOD 4.0,ID_2030,Dakar,Capacity|Electricity|Gas|Fossil|OCGT|w/o CCS,MW,218.68822057768588
+GENeSYS-MOD 4.0,ID_2030,Dakar,Capacity|Electricity|Oil|w/o CCS,MW,506.49999999999983
+GENeSYS-MOD 4.0,ID_2030,Dakar,Capacity|Electricity|Solar|PV|Utility,MW,38.7343016447621
+GENeSYS-MOD 4.0,ID_2030,Dakar,Capital Cost|Electricity|Battery|Lithium-Ion,EUR/MW,160000.0005184
+GENeSYS-MOD 4.0,ID_2030,Dakar,Capital Cost|Electricity|Biomass|w/o CCS,EUR/MW,2330000.0
+GENeSYS-MOD 4.0,ID_2030,Dakar,Capital Cost|Electricity|Coal|Hard coal|w/o CCS,EUR/MW,2758137.8619808
+GENeSYS-MOD 4.0,ID_2030,Dakar,Capital Cost|Electricity|Coal|Lignite|w/o CCS,EUR/MW,1800000.0
+GENeSYS-MOD 4.0,ID_2030,Dakar,Capital Cost|Electricity|Gas|Fossil|CCGT|w/o CCS,EUR/MW,698032.423533882
+GENeSYS-MOD 4.0,ID_2030,Dakar,Capital Cost|Electricity|Gas|Fossil|OCGT|w/o CCS,EUR/MW,635677.340788036
+GENeSYS-MOD 4.0,ID_2030,Dakar,Capital Cost|Electricity|Hydro|Pumped Storage,EUR/MW,1424245.4614799998
+GENeSYS-MOD 4.0,ID_2030,Dakar,Capital Cost|Electricity|Hydro|Run of River,EUR/MW,2560000.0
+GENeSYS-MOD 4.0,ID_2030,Dakar,Capital Cost|Electricity|Nuclear,EUR/MW,6000000.0
+GENeSYS-MOD 4.0,ID_2030,Dakar,Capital Cost|Electricity|Oil|w/o CCS,EUR/MW,650000.0
+GENeSYS-MOD 4.0,ID_2030,Dakar,Capital Cost|Electricity|Solar|PV|Rooftop|Commercial,EUR/MW,570000.0
+GENeSYS-MOD 4.0,ID_2030,Dakar,Capital Cost|Electricity|Solar|PV|Utility,EUR/MW,380000.0
+GENeSYS-MOD 4.0,ID_2030,Dakar,Capital Cost|Electricity|Wind|Onshore,EUR/MW,729013.064706364
+GENeSYS-MOD 4.0,ID_2030,Dakar,Charging Efficiency|Electricity|Battery|Lithium-Ion,-,0.95
+GENeSYS-MOD 4.0,ID_2030,Dakar,Charging Efficiency|Electricity|Hydro|Pumped Storage,-,0.866
+GENeSYS-MOD 4.0,ID_2030,Dakar,Discharging Efficiency|Electricity|Battery|Lithium-Ion,-,0.95
+GENeSYS-MOD 4.0,ID_2030,Dakar,Discharging Efficiency|Electricity|Hydro|Pumped Storage,-,0.866
+GENeSYS-MOD 4.0,ID_2030,Dakar,Emission Rate|CO2|Electricity|Coal|Hard coal|w/o CCS,tons/MWh,0.67455945348696
+GENeSYS-MOD 4.0,ID_2030,Dakar,Emission Rate|CO2|Electricity|Coal|Lignite|w/o CCS,tons/MWh,0.8290976849049599
+GENeSYS-MOD 4.0,ID_2030,Dakar,Emission Rate|CO2|Electricity|Gas|Fossil|CCGT|w/o CCS,tons/MWh,0.20088
+GENeSYS-MOD 4.0,ID_2030,Dakar,Emission Rate|CO2|Electricity|Gas|Fossil|OCGT|w/o CCS,tons/MWh,0.20088
+GENeSYS-MOD 4.0,ID_2030,Dakar,Emission Rate|CO2|Electricity|Oil|w/o CCS,tons/MWh,0.6821289796752
+GENeSYS-MOD 4.0,ID_2030,Dakar,Final Energy|Electricity,MWh/yr,5771782.404175973
+GENeSYS-MOD 4.0,ID_2030,Dakar,Fixed Cost|Electricity|Battery|Lithium-Ion,EUR/MW/yr,280.0
+GENeSYS-MOD 4.0,ID_2030,Dakar,Fixed Cost|Electricity|Biomass|w/o CCS,EUR/MW/yr,41900.0
+GENeSYS-MOD 4.0,ID_2030,Dakar,Fixed Cost|Electricity|Coal|Hard coal|w/o CCS,EUR/MW/yr,36000.0
+GENeSYS-MOD 4.0,ID_2030,Dakar,Fixed Cost|Electricity|Coal|Lignite|w/o CCS,EUR/MW/yr,42000.0
+GENeSYS-MOD 4.0,ID_2030,Dakar,Fixed Cost|Electricity|Gas|Fossil|CCGT|w/o CCS,EUR/MW/yr,21000.0
+GENeSYS-MOD 4.0,ID_2030,Dakar,Fixed Cost|Electricity|Gas|Fossil|OCGT|w/o CCS,EUR/MW/yr,8000.0
+GENeSYS-MOD 4.0,ID_2030,Dakar,Fixed Cost|Electricity|Hydro|Pumped Storage,EUR/MW/yr,22500.0
+GENeSYS-MOD 4.0,ID_2030,Dakar,Fixed Cost|Electricity|Hydro|Run of River,EUR/MW/yr,76800.0
+GENeSYS-MOD 4.0,ID_2030,Dakar,Fixed Cost|Electricity|Nuclear,EUR/MW/yr,115000.0
+GENeSYS-MOD 4.0,ID_2030,Dakar,Fixed Cost|Electricity|Oil|w/o CCS,EUR/MW/yr,6510.0
+GENeSYS-MOD 4.0,ID_2030,Dakar,Fixed Cost|Electricity|Solar|PV|Rooftop|Commercial,EUR/MW/yr,6660.0
+GENeSYS-MOD 4.0,ID_2030,Dakar,Fixed Cost|Electricity|Solar|PV|Utility,EUR/MW/yr,12003.25
+GENeSYS-MOD 4.0,ID_2030,Dakar,Fixed Cost|Electricity|Wind|Onshore,EUR/MW/yr,20000.0
+GENeSYS-MOD 4.0,ID_2030,Dakar,Lifetime|Electricity|Battery|Lithium-Ion,years,20.0
+GENeSYS-MOD 4.0,ID_2030,Dakar,Lifetime|Electricity|Biomass|w/o CCS,years,40.0
+GENeSYS-MOD 4.0,ID_2030,Dakar,Lifetime|Electricity|Coal|Hard coal|w/o CCS,years,41.0
+GENeSYS-MOD 4.0,ID_2030,Dakar,Lifetime|Electricity|Coal|Lignite|w/o CCS,years,41.0
+GENeSYS-MOD 4.0,ID_2030,Dakar,Lifetime|Electricity|Gas|Fossil|CCGT|w/o CCS,years,31.0
+GENeSYS-MOD 4.0,ID_2030,Dakar,Lifetime|Electricity|Gas|Fossil|OCGT|w/o CCS,years,31.0
+GENeSYS-MOD 4.0,ID_2030,Dakar,Lifetime|Electricity|Hydro|Pumped Storage,years,50.0
+GENeSYS-MOD 4.0,ID_2030,Dakar,Lifetime|Electricity|Hydro|Run of River,years,50.0
+GENeSYS-MOD 4.0,ID_2030,Dakar,Lifetime|Electricity|Nuclear,years,61.0
+GENeSYS-MOD 4.0,ID_2030,Dakar,Lifetime|Electricity|Oil|w/o CCS,years,31.0
+GENeSYS-MOD 4.0,ID_2030,Dakar,Lifetime|Electricity|Solar|PV|Rooftop|Commercial,years,35.0
+GENeSYS-MOD 4.0,ID_2030,Dakar,Lifetime|Electricity|Solar|PV|Utility,years,35.0
+GENeSYS-MOD 4.0,ID_2030,Dakar,Lifetime|Electricity|Wind|Onshore,years,27.0
+GENeSYS-MOD 4.0,ID_2030,Dakar,Secondary Energy|Electricity|Gas|Fossil|CCGT|w/o CCS,MWh/yr,3611111.1111110835
+GENeSYS-MOD 4.0,ID_2030,Dakar,Secondary Energy|Electricity|Gas|Fossil|OCGT|w/o CCS,MWh/yr,1666666.6666666667
+GENeSYS-MOD 4.0,ID_2030,Dakar,Secondary Energy|Electricity|Oil|w/o CCS,MWh/yr,2083333.3333333333
+GENeSYS-MOD 4.0,ID_2030,Dakar,Secondary Energy|Electricity|Solar|PV|Utility,MWh/yr,70250.58621561111
+GENeSYS-MOD 4.0,ID_2030,Dakar,Variable Cost|Electricity|Coal|Hard coal|w/o CCS,EUR/MWh,46.99051191939781
+GENeSYS-MOD 4.0,ID_2030,Dakar,Variable Cost|Electricity|Coal|Lignite|w/o CCS,EUR/MWh,244.9564622521318
+GENeSYS-MOD 4.0,ID_2030,Dakar,Variable Cost|Electricity|Gas|Fossil|CCGT|w/o CCS,EUR/MWh,87.06362501554698
+GENeSYS-MOD 4.0,ID_2030,Dakar,Variable Cost|Electricity|Gas|Fossil|OCGT|w/o CCS,EUR/MWh,122.6658352491798
+GENeSYS-MOD 4.0,ID_2030,Dakar,Variable Cost|Electricity|Nuclear,EUR/MWh,7.309714358125768
+GENeSYS-MOD 4.0,ID_2030,Dakar,Variable Cost|Electricity|Oil|w/o CCS,EUR/MWh,260.5624402189472
+GENeSYS-MOD 4.0,ID_2030,Dakar>Diourbel,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,Dakar>FKK,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,Dakar>LS,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,Dakar>MTKK,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,Dakar>Thies,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,Dakar>Thies,Network|Electricity|Expansion Cost,EUR_2020/MW,336400.0
+GENeSYS-MOD 4.0,ID_2030,Dakar>Thies,Network|Electricity|Maximum Flow,MW,5000.0
+GENeSYS-MOD 4.0,ID_2030,Dakar>ZS,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Capacity|Electricity|Solar|PV|Utility,MW,42.0818719386948
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Capital Cost|Electricity|Battery|Lithium-Ion,EUR/MW,160000.0005184
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Capital Cost|Electricity|Biomass|w/o CCS,EUR/MW,2330000.0
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Capital Cost|Electricity|Coal|Hard coal|w/o CCS,EUR/MW,2758137.8619808
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Capital Cost|Electricity|Coal|Lignite|w/o CCS,EUR/MW,1800000.0
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Capital Cost|Electricity|Gas|Fossil|CCGT|w/o CCS,EUR/MW,698032.423533882
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Capital Cost|Electricity|Gas|Fossil|OCGT|w/o CCS,EUR/MW,635677.340788036
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Capital Cost|Electricity|Hydro|Pumped Storage,EUR/MW,1424245.4614799998
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Capital Cost|Electricity|Hydro|Run of River,EUR/MW,2560000.0
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Capital Cost|Electricity|Nuclear,EUR/MW,6000000.0
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Capital Cost|Electricity|Oil|w/o CCS,EUR/MW,650000.0
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Capital Cost|Electricity|Solar|PV|Rooftop|Commercial,EUR/MW,570000.0
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Capital Cost|Electricity|Solar|PV|Utility,EUR/MW,380000.0
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Capital Cost|Electricity|Wind|Onshore,EUR/MW,729013.064706364
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Charging Efficiency|Electricity|Battery|Lithium-Ion,-,0.95
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Charging Efficiency|Electricity|Hydro|Pumped Storage,-,0.866
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Discharging Efficiency|Electricity|Battery|Lithium-Ion,-,0.95
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Discharging Efficiency|Electricity|Hydro|Pumped Storage,-,0.866
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Emission Rate|CO2|Electricity|Coal|Hard coal|w/o CCS,tons/MWh,0.67455945348696
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Emission Rate|CO2|Electricity|Coal|Lignite|w/o CCS,tons/MWh,0.8290976849049599
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Emission Rate|CO2|Electricity|Gas|Fossil|CCGT|w/o CCS,tons/MWh,0.20088
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Emission Rate|CO2|Electricity|Gas|Fossil|OCGT|w/o CCS,tons/MWh,0.20088
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Emission Rate|CO2|Electricity|Oil|w/o CCS,tons/MWh,0.6821289796752
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Final Energy|Electricity,MWh/yr,876862.5999308056
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Fixed Cost|Electricity|Battery|Lithium-Ion,EUR/MW/yr,280.0
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Fixed Cost|Electricity|Biomass|w/o CCS,EUR/MW/yr,41900.0
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Fixed Cost|Electricity|Coal|Hard coal|w/o CCS,EUR/MW/yr,36000.0
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Fixed Cost|Electricity|Coal|Lignite|w/o CCS,EUR/MW/yr,42000.0
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Fixed Cost|Electricity|Gas|Fossil|CCGT|w/o CCS,EUR/MW/yr,21000.0
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Fixed Cost|Electricity|Gas|Fossil|OCGT|w/o CCS,EUR/MW/yr,8000.0
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Fixed Cost|Electricity|Hydro|Pumped Storage,EUR/MW/yr,22500.0
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Fixed Cost|Electricity|Hydro|Run of River,EUR/MW/yr,76800.0
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Fixed Cost|Electricity|Nuclear,EUR/MW/yr,115000.0
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Fixed Cost|Electricity|Oil|w/o CCS,EUR/MW/yr,6510.0
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Fixed Cost|Electricity|Solar|PV|Rooftop|Commercial,EUR/MW/yr,6660.0
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Fixed Cost|Electricity|Solar|PV|Utility,EUR/MW/yr,12003.25
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Fixed Cost|Electricity|Wind|Onshore,EUR/MW/yr,20000.0
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Lifetime|Electricity|Battery|Lithium-Ion,years,20.0
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Lifetime|Electricity|Biomass|w/o CCS,years,40.0
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Lifetime|Electricity|Coal|Hard coal|w/o CCS,years,41.0
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Lifetime|Electricity|Coal|Lignite|w/o CCS,years,41.0
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Lifetime|Electricity|Gas|Fossil|CCGT|w/o CCS,years,31.0
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Lifetime|Electricity|Gas|Fossil|OCGT|w/o CCS,years,31.0
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Lifetime|Electricity|Hydro|Pumped Storage,years,50.0
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Lifetime|Electricity|Hydro|Run of River,years,50.0
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Lifetime|Electricity|Nuclear,years,61.0
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Lifetime|Electricity|Oil|w/o CCS,years,31.0
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Lifetime|Electricity|Solar|PV|Rooftop|Commercial,years,35.0
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Lifetime|Electricity|Solar|PV|Utility,years,35.0
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Lifetime|Electricity|Wind|Onshore,years,27.0
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Secondary Energy|Electricity|Solar|PV|Utility,MWh/yr,73648.64957941667
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Variable Cost|Electricity|Coal|Hard coal|w/o CCS,EUR/MWh,46.99051191939781
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Variable Cost|Electricity|Coal|Lignite|w/o CCS,EUR/MWh,244.9564622521318
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Variable Cost|Electricity|Gas|Fossil|CCGT|w/o CCS,EUR/MWh,87.06362501554698
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Variable Cost|Electricity|Gas|Fossil|OCGT|w/o CCS,EUR/MWh,122.6658352491798
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Variable Cost|Electricity|Nuclear,EUR/MWh,7.309714358125768
+GENeSYS-MOD 4.0,ID_2030,Diourbel,Variable Cost|Electricity|Oil|w/o CCS,EUR/MWh,260.5624402189472
+GENeSYS-MOD 4.0,ID_2030,Diourbel>Dakar,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,Diourbel>FKK,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,Diourbel>LS,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,Diourbel>MTKK,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,Diourbel>Thies,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,Diourbel>Thies,Network|Electricity|Expansion Cost,EUR_2020/MW,441612.0
+GENeSYS-MOD 4.0,ID_2030,Diourbel>Thies,Network|Electricity|Maximum Flow,MW,1000.0
+GENeSYS-MOD 4.0,ID_2030,Diourbel>ZS,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,FKK,Capacity|Electricity|Solar|PV|Utility,MW,100.55830787012809
+GENeSYS-MOD 4.0,ID_2030,FKK,Capital Cost|Electricity|Battery|Lithium-Ion,EUR/MW,160000.0005184
+GENeSYS-MOD 4.0,ID_2030,FKK,Capital Cost|Electricity|Biomass|w/o CCS,EUR/MW,2330000.0
+GENeSYS-MOD 4.0,ID_2030,FKK,Capital Cost|Electricity|Coal|Hard coal|w/o CCS,EUR/MW,2758137.8619808
+GENeSYS-MOD 4.0,ID_2030,FKK,Capital Cost|Electricity|Coal|Lignite|w/o CCS,EUR/MW,1800000.0
+GENeSYS-MOD 4.0,ID_2030,FKK,Capital Cost|Electricity|Gas|Fossil|CCGT|w/o CCS,EUR/MW,698032.423533882
+GENeSYS-MOD 4.0,ID_2030,FKK,Capital Cost|Electricity|Gas|Fossil|OCGT|w/o CCS,EUR/MW,635677.340788036
+GENeSYS-MOD 4.0,ID_2030,FKK,Capital Cost|Electricity|Hydro|Pumped Storage,EUR/MW,1424245.4614799998
+GENeSYS-MOD 4.0,ID_2030,FKK,Capital Cost|Electricity|Hydro|Run of River,EUR/MW,2560000.0
+GENeSYS-MOD 4.0,ID_2030,FKK,Capital Cost|Electricity|Nuclear,EUR/MW,6000000.0
+GENeSYS-MOD 4.0,ID_2030,FKK,Capital Cost|Electricity|Oil|w/o CCS,EUR/MW,650000.0
+GENeSYS-MOD 4.0,ID_2030,FKK,Capital Cost|Electricity|Solar|PV|Rooftop|Commercial,EUR/MW,570000.0
+GENeSYS-MOD 4.0,ID_2030,FKK,Capital Cost|Electricity|Solar|PV|Utility,EUR/MW,380000.0
+GENeSYS-MOD 4.0,ID_2030,FKK,Capital Cost|Electricity|Wind|Onshore,EUR/MW,729013.064706364
+GENeSYS-MOD 4.0,ID_2030,FKK,Charging Efficiency|Electricity|Battery|Lithium-Ion,-,0.95
+GENeSYS-MOD 4.0,ID_2030,FKK,Charging Efficiency|Electricity|Hydro|Pumped Storage,-,0.866
+GENeSYS-MOD 4.0,ID_2030,FKK,Discharging Efficiency|Electricity|Battery|Lithium-Ion,-,0.95
+GENeSYS-MOD 4.0,ID_2030,FKK,Discharging Efficiency|Electricity|Hydro|Pumped Storage,-,0.866
+GENeSYS-MOD 4.0,ID_2030,FKK,Emission Rate|CO2|Electricity|Coal|Hard coal|w/o CCS,tons/MWh,0.67455945348696
+GENeSYS-MOD 4.0,ID_2030,FKK,Emission Rate|CO2|Electricity|Coal|Lignite|w/o CCS,tons/MWh,0.8290976849049599
+GENeSYS-MOD 4.0,ID_2030,FKK,Emission Rate|CO2|Electricity|Gas|Fossil|CCGT|w/o CCS,tons/MWh,0.20088
+GENeSYS-MOD 4.0,ID_2030,FKK,Emission Rate|CO2|Electricity|Gas|Fossil|OCGT|w/o CCS,tons/MWh,0.20088
+GENeSYS-MOD 4.0,ID_2030,FKK,Emission Rate|CO2|Electricity|Oil|w/o CCS,tons/MWh,0.6821289796752
+GENeSYS-MOD 4.0,ID_2030,FKK,Final Energy|Electricity,MWh/yr,977552.0975082779
+GENeSYS-MOD 4.0,ID_2030,FKK,Fixed Cost|Electricity|Battery|Lithium-Ion,EUR/MW/yr,280.0
+GENeSYS-MOD 4.0,ID_2030,FKK,Fixed Cost|Electricity|Biomass|w/o CCS,EUR/MW/yr,41900.0
+GENeSYS-MOD 4.0,ID_2030,FKK,Fixed Cost|Electricity|Coal|Hard coal|w/o CCS,EUR/MW/yr,36000.0
+GENeSYS-MOD 4.0,ID_2030,FKK,Fixed Cost|Electricity|Coal|Lignite|w/o CCS,EUR/MW/yr,42000.0
+GENeSYS-MOD 4.0,ID_2030,FKK,Fixed Cost|Electricity|Gas|Fossil|CCGT|w/o CCS,EUR/MW/yr,21000.0
+GENeSYS-MOD 4.0,ID_2030,FKK,Fixed Cost|Electricity|Gas|Fossil|OCGT|w/o CCS,EUR/MW/yr,8000.0
+GENeSYS-MOD 4.0,ID_2030,FKK,Fixed Cost|Electricity|Hydro|Pumped Storage,EUR/MW/yr,22500.0
+GENeSYS-MOD 4.0,ID_2030,FKK,Fixed Cost|Electricity|Hydro|Run of River,EUR/MW/yr,76800.0
+GENeSYS-MOD 4.0,ID_2030,FKK,Fixed Cost|Electricity|Nuclear,EUR/MW/yr,115000.0
+GENeSYS-MOD 4.0,ID_2030,FKK,Fixed Cost|Electricity|Oil|w/o CCS,EUR/MW/yr,6510.0
+GENeSYS-MOD 4.0,ID_2030,FKK,Fixed Cost|Electricity|Solar|PV|Rooftop|Commercial,EUR/MW/yr,6660.0
+GENeSYS-MOD 4.0,ID_2030,FKK,Fixed Cost|Electricity|Solar|PV|Utility,EUR/MW/yr,12003.25
+GENeSYS-MOD 4.0,ID_2030,FKK,Fixed Cost|Electricity|Wind|Onshore,EUR/MW/yr,20000.0
+GENeSYS-MOD 4.0,ID_2030,FKK,Lifetime|Electricity|Battery|Lithium-Ion,years,20.0
+GENeSYS-MOD 4.0,ID_2030,FKK,Lifetime|Electricity|Biomass|w/o CCS,years,40.0
+GENeSYS-MOD 4.0,ID_2030,FKK,Lifetime|Electricity|Coal|Hard coal|w/o CCS,years,41.0
+GENeSYS-MOD 4.0,ID_2030,FKK,Lifetime|Electricity|Coal|Lignite|w/o CCS,years,41.0
+GENeSYS-MOD 4.0,ID_2030,FKK,Lifetime|Electricity|Gas|Fossil|CCGT|w/o CCS,years,31.0
+GENeSYS-MOD 4.0,ID_2030,FKK,Lifetime|Electricity|Gas|Fossil|OCGT|w/o CCS,years,31.0
+GENeSYS-MOD 4.0,ID_2030,FKK,Lifetime|Electricity|Hydro|Pumped Storage,years,50.0
+GENeSYS-MOD 4.0,ID_2030,FKK,Lifetime|Electricity|Hydro|Run of River,years,50.0
+GENeSYS-MOD 4.0,ID_2030,FKK,Lifetime|Electricity|Nuclear,years,61.0
+GENeSYS-MOD 4.0,ID_2030,FKK,Lifetime|Electricity|Oil|w/o CCS,years,31.0
+GENeSYS-MOD 4.0,ID_2030,FKK,Lifetime|Electricity|Solar|PV|Rooftop|Commercial,years,35.0
+GENeSYS-MOD 4.0,ID_2030,FKK,Lifetime|Electricity|Solar|PV|Utility,years,35.0
+GENeSYS-MOD 4.0,ID_2030,FKK,Lifetime|Electricity|Wind|Onshore,years,27.0
+GENeSYS-MOD 4.0,ID_2030,FKK,Secondary Energy|Electricity|Solar|PV|Utility,MWh/yr,171973.34805758335
+GENeSYS-MOD 4.0,ID_2030,FKK,Variable Cost|Electricity|Coal|Hard coal|w/o CCS,EUR/MWh,46.99051191939781
+GENeSYS-MOD 4.0,ID_2030,FKK,Variable Cost|Electricity|Coal|Lignite|w/o CCS,EUR/MWh,244.9564622521318
+GENeSYS-MOD 4.0,ID_2030,FKK,Variable Cost|Electricity|Gas|Fossil|CCGT|w/o CCS,EUR/MWh,87.06348244725649
+GENeSYS-MOD 4.0,ID_2030,FKK,Variable Cost|Electricity|Gas|Fossil|OCGT|w/o CCS,EUR/MWh,122.6656343574978
+GENeSYS-MOD 4.0,ID_2030,FKK,Variable Cost|Electricity|Nuclear,EUR/MWh,7.309714358125768
+GENeSYS-MOD 4.0,ID_2030,FKK,Variable Cost|Electricity|Oil|w/o CCS,EUR/MWh,260.5624402189472
+GENeSYS-MOD 4.0,ID_2030,FKK>Dakar,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,FKK>Diourbel,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,FKK>LS,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,FKK>MTKK,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,FKK>MTKK,Network|Electricity|Expansion Cost,EUR_2020/MW,1592100.0
+GENeSYS-MOD 4.0,ID_2030,FKK>MTKK,Network|Electricity|Maximum Flow,MW,500.0
+GENeSYS-MOD 4.0,ID_2030,FKK>Thies,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,FKK>Thies,Network|Electricity|Expansion Cost,EUR_2020/MW,694665.9999999999
+GENeSYS-MOD 4.0,ID_2030,FKK>Thies,Network|Electricity|Maximum Flow,MW,3000.0
+GENeSYS-MOD 4.0,ID_2030,FKK>ZS,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,FKK>ZS,Network|Electricity|Expansion Cost,EUR_2020/MW,1334000.0
+GENeSYS-MOD 4.0,ID_2030,FKK>ZS,Network|Electricity|Maximum Flow,MW,500.0
+GENeSYS-MOD 4.0,ID_2030,LS,Capacity|Electricity|Solar|PV|Utility,MW,58.250914586971
+GENeSYS-MOD 4.0,ID_2030,LS,Capital Cost|Electricity|Battery|Lithium-Ion,EUR/MW,160000.0005184
+GENeSYS-MOD 4.0,ID_2030,LS,Capital Cost|Electricity|Biomass|w/o CCS,EUR/MW,2330000.0
+GENeSYS-MOD 4.0,ID_2030,LS,Capital Cost|Electricity|Coal|Hard coal|w/o CCS,EUR/MW,2758137.8619808
+GENeSYS-MOD 4.0,ID_2030,LS,Capital Cost|Electricity|Coal|Lignite|w/o CCS,EUR/MW,1800000.0
+GENeSYS-MOD 4.0,ID_2030,LS,Capital Cost|Electricity|Gas|Fossil|CCGT|w/o CCS,EUR/MW,698032.423533882
+GENeSYS-MOD 4.0,ID_2030,LS,Capital Cost|Electricity|Gas|Fossil|OCGT|w/o CCS,EUR/MW,635677.340788036
+GENeSYS-MOD 4.0,ID_2030,LS,Capital Cost|Electricity|Hydro|Pumped Storage,EUR/MW,1424245.4614799998
+GENeSYS-MOD 4.0,ID_2030,LS,Capital Cost|Electricity|Hydro|Run of River,EUR/MW,2560000.0
+GENeSYS-MOD 4.0,ID_2030,LS,Capital Cost|Electricity|Nuclear,EUR/MW,6000000.0
+GENeSYS-MOD 4.0,ID_2030,LS,Capital Cost|Electricity|Oil|w/o CCS,EUR/MW,650000.0
+GENeSYS-MOD 4.0,ID_2030,LS,Capital Cost|Electricity|Solar|PV|Rooftop|Commercial,EUR/MW,570000.0
+GENeSYS-MOD 4.0,ID_2030,LS,Capital Cost|Electricity|Solar|PV|Utility,EUR/MW,380000.0
+GENeSYS-MOD 4.0,ID_2030,LS,Capital Cost|Electricity|Wind|Onshore,EUR/MW,729013.064706364
+GENeSYS-MOD 4.0,ID_2030,LS,Charging Efficiency|Electricity|Battery|Lithium-Ion,-,0.95
+GENeSYS-MOD 4.0,ID_2030,LS,Charging Efficiency|Electricity|Hydro|Pumped Storage,-,0.866
+GENeSYS-MOD 4.0,ID_2030,LS,Discharging Efficiency|Electricity|Battery|Lithium-Ion,-,0.95
+GENeSYS-MOD 4.0,ID_2030,LS,Discharging Efficiency|Electricity|Hydro|Pumped Storage,-,0.866
+GENeSYS-MOD 4.0,ID_2030,LS,Emission Rate|CO2|Electricity|Coal|Hard coal|w/o CCS,tons/MWh,0.67455945348696
+GENeSYS-MOD 4.0,ID_2030,LS,Emission Rate|CO2|Electricity|Coal|Lignite|w/o CCS,tons/MWh,0.8290976849049599
+GENeSYS-MOD 4.0,ID_2030,LS,Emission Rate|CO2|Electricity|Gas|Fossil|CCGT|w/o CCS,tons/MWh,0.20088
+GENeSYS-MOD 4.0,ID_2030,LS,Emission Rate|CO2|Electricity|Gas|Fossil|OCGT|w/o CCS,tons/MWh,0.20088
+GENeSYS-MOD 4.0,ID_2030,LS,Emission Rate|CO2|Electricity|Oil|w/o CCS,tons/MWh,0.6821289796752
+GENeSYS-MOD 4.0,ID_2030,LS,Final Energy|Electricity,MWh/yr,759501.1973806389
+GENeSYS-MOD 4.0,ID_2030,LS,Fixed Cost|Electricity|Battery|Lithium-Ion,EUR/MW/yr,280.0
+GENeSYS-MOD 4.0,ID_2030,LS,Fixed Cost|Electricity|Biomass|w/o CCS,EUR/MW/yr,41900.0
+GENeSYS-MOD 4.0,ID_2030,LS,Fixed Cost|Electricity|Coal|Hard coal|w/o CCS,EUR/MW/yr,36000.0
+GENeSYS-MOD 4.0,ID_2030,LS,Fixed Cost|Electricity|Coal|Lignite|w/o CCS,EUR/MW/yr,42000.0
+GENeSYS-MOD 4.0,ID_2030,LS,Fixed Cost|Electricity|Gas|Fossil|CCGT|w/o CCS,EUR/MW/yr,21000.0
+GENeSYS-MOD 4.0,ID_2030,LS,Fixed Cost|Electricity|Gas|Fossil|OCGT|w/o CCS,EUR/MW/yr,8000.0
+GENeSYS-MOD 4.0,ID_2030,LS,Fixed Cost|Electricity|Hydro|Pumped Storage,EUR/MW/yr,22500.0
+GENeSYS-MOD 4.0,ID_2030,LS,Fixed Cost|Electricity|Hydro|Run of River,EUR/MW/yr,76800.0
+GENeSYS-MOD 4.0,ID_2030,LS,Fixed Cost|Electricity|Nuclear,EUR/MW/yr,115000.0
+GENeSYS-MOD 4.0,ID_2030,LS,Fixed Cost|Electricity|Oil|w/o CCS,EUR/MW/yr,6510.0
+GENeSYS-MOD 4.0,ID_2030,LS,Fixed Cost|Electricity|Solar|PV|Rooftop|Commercial,EUR/MW/yr,6660.0
+GENeSYS-MOD 4.0,ID_2030,LS,Fixed Cost|Electricity|Solar|PV|Utility,EUR/MW/yr,12003.25
+GENeSYS-MOD 4.0,ID_2030,LS,Fixed Cost|Electricity|Wind|Onshore,EUR/MW/yr,20000.0
+GENeSYS-MOD 4.0,ID_2030,LS,Lifetime|Electricity|Battery|Lithium-Ion,years,20.0
+GENeSYS-MOD 4.0,ID_2030,LS,Lifetime|Electricity|Biomass|w/o CCS,years,40.0
+GENeSYS-MOD 4.0,ID_2030,LS,Lifetime|Electricity|Coal|Hard coal|w/o CCS,years,41.0
+GENeSYS-MOD 4.0,ID_2030,LS,Lifetime|Electricity|Coal|Lignite|w/o CCS,years,41.0
+GENeSYS-MOD 4.0,ID_2030,LS,Lifetime|Electricity|Gas|Fossil|CCGT|w/o CCS,years,31.0
+GENeSYS-MOD 4.0,ID_2030,LS,Lifetime|Electricity|Gas|Fossil|OCGT|w/o CCS,years,31.0
+GENeSYS-MOD 4.0,ID_2030,LS,Lifetime|Electricity|Hydro|Pumped Storage,years,50.0
+GENeSYS-MOD 4.0,ID_2030,LS,Lifetime|Electricity|Hydro|Run of River,years,50.0
+GENeSYS-MOD 4.0,ID_2030,LS,Lifetime|Electricity|Nuclear,years,61.0
+GENeSYS-MOD 4.0,ID_2030,LS,Lifetime|Electricity|Oil|w/o CCS,years,31.0
+GENeSYS-MOD 4.0,ID_2030,LS,Lifetime|Electricity|Solar|PV|Rooftop|Commercial,years,35.0
+GENeSYS-MOD 4.0,ID_2030,LS,Lifetime|Electricity|Solar|PV|Utility,years,35.0
+GENeSYS-MOD 4.0,ID_2030,LS,Lifetime|Electricity|Wind|Onshore,years,27.0
+GENeSYS-MOD 4.0,ID_2030,LS,Secondary Energy|Electricity|Solar|PV|Utility,MWh/yr,105375.87932341667
+GENeSYS-MOD 4.0,ID_2030,LS,Variable Cost|Electricity|Coal|Hard coal|w/o CCS,EUR/MWh,46.99051191939781
+GENeSYS-MOD 4.0,ID_2030,LS,Variable Cost|Electricity|Coal|Lignite|w/o CCS,EUR/MWh,244.9564622521317
+GENeSYS-MOD 4.0,ID_2030,LS,Variable Cost|Electricity|Gas|Fossil|CCGT|w/o CCS,EUR/MWh,87.06362501554698
+GENeSYS-MOD 4.0,ID_2030,LS,Variable Cost|Electricity|Gas|Fossil|OCGT|w/o CCS,EUR/MWh,122.6658352491798
+GENeSYS-MOD 4.0,ID_2030,LS,Variable Cost|Electricity|Nuclear,EUR/MWh,7.309714358125768
+GENeSYS-MOD 4.0,ID_2030,LS,Variable Cost|Electricity|Oil|w/o CCS,EUR/MWh,260.5624402189472
+GENeSYS-MOD 4.0,ID_2030,LS>Dakar,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,LS>Diourbel,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,LS>FKK,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,LS>MTKK,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,LS>Thies,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,LS>Thies,Network|Electricity|Expansion Cost,EUR_2020/MW,744603.9999999999
+GENeSYS-MOD 4.0,ID_2030,LS>Thies,Network|Electricity|Maximum Flow,MW,1000.0
+GENeSYS-MOD 4.0,ID_2030,LS>ZS,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,MTKK,Capacity|Electricity|Oil|w/o CCS,MW,16.689364201981398
+GENeSYS-MOD 4.0,ID_2030,MTKK,Capital Cost|Electricity|Battery|Lithium-Ion,EUR/MW,160000.0005184
+GENeSYS-MOD 4.0,ID_2030,MTKK,Capital Cost|Electricity|Biomass|w/o CCS,EUR/MW,2330000.0
+GENeSYS-MOD 4.0,ID_2030,MTKK,Capital Cost|Electricity|Coal|Hard coal|w/o CCS,EUR/MW,2758137.8619808
+GENeSYS-MOD 4.0,ID_2030,MTKK,Capital Cost|Electricity|Coal|Lignite|w/o CCS,EUR/MW,1800000.0
+GENeSYS-MOD 4.0,ID_2030,MTKK,Capital Cost|Electricity|Gas|Fossil|CCGT|w/o CCS,EUR/MW,698032.423533882
+GENeSYS-MOD 4.0,ID_2030,MTKK,Capital Cost|Electricity|Gas|Fossil|OCGT|w/o CCS,EUR/MW,635677.340788036
+GENeSYS-MOD 4.0,ID_2030,MTKK,Capital Cost|Electricity|Hydro|Pumped Storage,EUR/MW,1424245.4614799998
+GENeSYS-MOD 4.0,ID_2030,MTKK,Capital Cost|Electricity|Hydro|Run of River,EUR/MW,2560000.0
+GENeSYS-MOD 4.0,ID_2030,MTKK,Capital Cost|Electricity|Nuclear,EUR/MW,6000000.0
+GENeSYS-MOD 4.0,ID_2030,MTKK,Capital Cost|Electricity|Oil|w/o CCS,EUR/MW,650000.0
+GENeSYS-MOD 4.0,ID_2030,MTKK,Capital Cost|Electricity|Solar|PV|Rooftop|Commercial,EUR/MW,570000.0
+GENeSYS-MOD 4.0,ID_2030,MTKK,Capital Cost|Electricity|Solar|PV|Utility,EUR/MW,380000.0
+GENeSYS-MOD 4.0,ID_2030,MTKK,Capital Cost|Electricity|Wind|Onshore,EUR/MW,729013.064706364
+GENeSYS-MOD 4.0,ID_2030,MTKK,Charging Efficiency|Electricity|Battery|Lithium-Ion,-,0.95
+GENeSYS-MOD 4.0,ID_2030,MTKK,Charging Efficiency|Electricity|Hydro|Pumped Storage,-,0.866
+GENeSYS-MOD 4.0,ID_2030,MTKK,Discharging Efficiency|Electricity|Battery|Lithium-Ion,-,0.95
+GENeSYS-MOD 4.0,ID_2030,MTKK,Discharging Efficiency|Electricity|Hydro|Pumped Storage,-,0.866
+GENeSYS-MOD 4.0,ID_2030,MTKK,Emission Rate|CO2|Electricity|Coal|Hard coal|w/o CCS,tons/MWh,0.67455945348696
+GENeSYS-MOD 4.0,ID_2030,MTKK,Emission Rate|CO2|Electricity|Coal|Lignite|w/o CCS,tons/MWh,0.8290976849049599
+GENeSYS-MOD 4.0,ID_2030,MTKK,Emission Rate|CO2|Electricity|Gas|Fossil|CCGT|w/o CCS,tons/MWh,0.20088
+GENeSYS-MOD 4.0,ID_2030,MTKK,Emission Rate|CO2|Electricity|Gas|Fossil|OCGT|w/o CCS,tons/MWh,0.20088
+GENeSYS-MOD 4.0,ID_2030,MTKK,Emission Rate|CO2|Electricity|Oil|w/o CCS,tons/MWh,0.6821289796752
+GENeSYS-MOD 4.0,ID_2030,MTKK,Final Energy|Electricity,MWh/yr,907145.0799425278
+GENeSYS-MOD 4.0,ID_2030,MTKK,Fixed Cost|Electricity|Battery|Lithium-Ion,EUR/MW/yr,280.0
+GENeSYS-MOD 4.0,ID_2030,MTKK,Fixed Cost|Electricity|Biomass|w/o CCS,EUR/MW/yr,41900.0
+GENeSYS-MOD 4.0,ID_2030,MTKK,Fixed Cost|Electricity|Coal|Hard coal|w/o CCS,EUR/MW/yr,36000.0
+GENeSYS-MOD 4.0,ID_2030,MTKK,Fixed Cost|Electricity|Coal|Lignite|w/o CCS,EUR/MW/yr,42000.0
+GENeSYS-MOD 4.0,ID_2030,MTKK,Fixed Cost|Electricity|Gas|Fossil|CCGT|w/o CCS,EUR/MW/yr,21000.0
+GENeSYS-MOD 4.0,ID_2030,MTKK,Fixed Cost|Electricity|Gas|Fossil|OCGT|w/o CCS,EUR/MW/yr,8000.0
+GENeSYS-MOD 4.0,ID_2030,MTKK,Fixed Cost|Electricity|Hydro|Pumped Storage,EUR/MW/yr,22500.0
+GENeSYS-MOD 4.0,ID_2030,MTKK,Fixed Cost|Electricity|Hydro|Run of River,EUR/MW/yr,76800.0
+GENeSYS-MOD 4.0,ID_2030,MTKK,Fixed Cost|Electricity|Nuclear,EUR/MW/yr,115000.0
+GENeSYS-MOD 4.0,ID_2030,MTKK,Fixed Cost|Electricity|Oil|w/o CCS,EUR/MW/yr,6510.0
+GENeSYS-MOD 4.0,ID_2030,MTKK,Fixed Cost|Electricity|Solar|PV|Rooftop|Commercial,EUR/MW/yr,6660.0
+GENeSYS-MOD 4.0,ID_2030,MTKK,Fixed Cost|Electricity|Solar|PV|Utility,EUR/MW/yr,12003.25
+GENeSYS-MOD 4.0,ID_2030,MTKK,Fixed Cost|Electricity|Wind|Onshore,EUR/MW/yr,20000.0
+GENeSYS-MOD 4.0,ID_2030,MTKK,Lifetime|Electricity|Battery|Lithium-Ion,years,20.0
+GENeSYS-MOD 4.0,ID_2030,MTKK,Lifetime|Electricity|Biomass|w/o CCS,years,40.0
+GENeSYS-MOD 4.0,ID_2030,MTKK,Lifetime|Electricity|Coal|Hard coal|w/o CCS,years,41.0
+GENeSYS-MOD 4.0,ID_2030,MTKK,Lifetime|Electricity|Coal|Lignite|w/o CCS,years,41.0
+GENeSYS-MOD 4.0,ID_2030,MTKK,Lifetime|Electricity|Gas|Fossil|CCGT|w/o CCS,years,31.0
+GENeSYS-MOD 4.0,ID_2030,MTKK,Lifetime|Electricity|Gas|Fossil|OCGT|w/o CCS,years,31.0
+GENeSYS-MOD 4.0,ID_2030,MTKK,Lifetime|Electricity|Hydro|Pumped Storage,years,50.0
+GENeSYS-MOD 4.0,ID_2030,MTKK,Lifetime|Electricity|Hydro|Run of River,years,50.0
+GENeSYS-MOD 4.0,ID_2030,MTKK,Lifetime|Electricity|Nuclear,years,61.0
+GENeSYS-MOD 4.0,ID_2030,MTKK,Lifetime|Electricity|Oil|w/o CCS,years,31.0
+GENeSYS-MOD 4.0,ID_2030,MTKK,Lifetime|Electricity|Solar|PV|Rooftop|Commercial,years,35.0
+GENeSYS-MOD 4.0,ID_2030,MTKK,Lifetime|Electricity|Solar|PV|Utility,years,35.0
+GENeSYS-MOD 4.0,ID_2030,MTKK,Lifetime|Electricity|Wind|Onshore,years,27.0
+GENeSYS-MOD 4.0,ID_2030,MTKK,Secondary Energy|Electricity|Oil|w/o CCS,MWh/yr,138888.8888888889
+GENeSYS-MOD 4.0,ID_2030,MTKK,Variable Cost|Electricity|Coal|Hard coal|w/o CCS,EUR/MWh,46.99051191939781
+GENeSYS-MOD 4.0,ID_2030,MTKK,Variable Cost|Electricity|Coal|Lignite|w/o CCS,EUR/MWh,244.9564622521318
+GENeSYS-MOD 4.0,ID_2030,MTKK,Variable Cost|Electricity|Gas|Fossil|CCGT|w/o CCS,EUR/MWh,87.06314560036587
+GENeSYS-MOD 4.0,ID_2030,MTKK,Variable Cost|Electricity|Gas|Fossil|OCGT|w/o CCS,EUR/MWh,122.6651597096065
+GENeSYS-MOD 4.0,ID_2030,MTKK,Variable Cost|Electricity|Nuclear,EUR/MWh,7.309714358125768
+GENeSYS-MOD 4.0,ID_2030,MTKK,Variable Cost|Electricity|Oil|w/o CCS,EUR/MWh,260.5624402189472
+GENeSYS-MOD 4.0,ID_2030,MTKK,Capacity|Electricity|Hydro|Reservoir,MW,200.0
+GENeSYS-MOD 4.0,ID_2030,MTKK,Capacity|Electricity|Hydro|Run of River,MW,200.0
+GENeSYS-MOD 4.0,ID_2030,MTKK,Secondary Energy|Electricity|Hydro|Reservoir,MWh/yr,731078.5860959722
+GENeSYS-MOD 4.0,ID_2030,MTKK,Secondary Energy|Electricity|Hydro|Run of River,MWh/yr,392916.64337727777
+GENeSYS-MOD 4.0,ID_2030,MTKK>Dakar,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,MTKK>Diourbel,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,MTKK>FKK,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,MTKK>FKK,Network|Electricity|Expansion Cost,EUR_2020/MW,1592100.0
+GENeSYS-MOD 4.0,ID_2030,MTKK>FKK,Network|Electricity|Maximum Flow,MW,500.0
+GENeSYS-MOD 4.0,ID_2030,MTKK>LS,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,MTKK>Thies,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,MTKK>ZS,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,MTKK>ZS,Network|Electricity|Expansion Cost,EUR_2020/MW,1655842.0
+GENeSYS-MOD 4.0,ID_2030,MTKK>ZS,Network|Electricity|Maximum Flow,MW,300.0
+GENeSYS-MOD 4.0,ID_2030,Thies,Capacity|Electricity|Gas|Fossil|CCGT|w/o CCS,MW,164.0161654332645
+GENeSYS-MOD 4.0,ID_2030,Thies,Capacity|Electricity|Oil|w/o CCS,MW,99.9999999999999
+GENeSYS-MOD 4.0,ID_2030,Thies,Capacity|Electricity|Solar|PV|Utility,MW,330.1801289764521
+GENeSYS-MOD 4.0,ID_2030,Thies,Capital Cost|Electricity|Battery|Lithium-Ion,EUR/MW,160000.0005184
+GENeSYS-MOD 4.0,ID_2030,Thies,Capital Cost|Electricity|Biomass|w/o CCS,EUR/MW,2330000.0
+GENeSYS-MOD 4.0,ID_2030,Thies,Capital Cost|Electricity|Coal|Hard coal|w/o CCS,EUR/MW,2758137.8619808
+GENeSYS-MOD 4.0,ID_2030,Thies,Capital Cost|Electricity|Coal|Lignite|w/o CCS,EUR/MW,1800000.0
+GENeSYS-MOD 4.0,ID_2030,Thies,Capital Cost|Electricity|Gas|Fossil|CCGT|w/o CCS,EUR/MW,698032.423533882
+GENeSYS-MOD 4.0,ID_2030,Thies,Capital Cost|Electricity|Gas|Fossil|OCGT|w/o CCS,EUR/MW,635677.340788036
+GENeSYS-MOD 4.0,ID_2030,Thies,Capital Cost|Electricity|Hydro|Pumped Storage,EUR/MW,1424245.4614799998
+GENeSYS-MOD 4.0,ID_2030,Thies,Capital Cost|Electricity|Hydro|Run of River,EUR/MW,2560000.0
+GENeSYS-MOD 4.0,ID_2030,Thies,Capital Cost|Electricity|Nuclear,EUR/MW,6000000.0
+GENeSYS-MOD 4.0,ID_2030,Thies,Capital Cost|Electricity|Oil|w/o CCS,EUR/MW,650000.0
+GENeSYS-MOD 4.0,ID_2030,Thies,Capital Cost|Electricity|Solar|PV|Rooftop|Commercial,EUR/MW,570000.0
+GENeSYS-MOD 4.0,ID_2030,Thies,Capital Cost|Electricity|Solar|PV|Utility,EUR/MW,380000.0
+GENeSYS-MOD 4.0,ID_2030,Thies,Capital Cost|Electricity|Wind|Onshore,EUR/MW,729013.064706364
+GENeSYS-MOD 4.0,ID_2030,Thies,Charging Efficiency|Electricity|Battery|Lithium-Ion,-,0.95
+GENeSYS-MOD 4.0,ID_2030,Thies,Charging Efficiency|Electricity|Hydro|Pumped Storage,-,0.866
+GENeSYS-MOD 4.0,ID_2030,Thies,Discharging Efficiency|Electricity|Battery|Lithium-Ion,-,0.95
+GENeSYS-MOD 4.0,ID_2030,Thies,Discharging Efficiency|Electricity|Hydro|Pumped Storage,-,0.866
+GENeSYS-MOD 4.0,ID_2030,Thies,Emission Rate|CO2|Electricity|Coal|Hard coal|w/o CCS,tons/MWh,0.67455945348696
+GENeSYS-MOD 4.0,ID_2030,Thies,Emission Rate|CO2|Electricity|Coal|Lignite|w/o CCS,tons/MWh,0.8290976849049599
+GENeSYS-MOD 4.0,ID_2030,Thies,Emission Rate|CO2|Electricity|Gas|Fossil|CCGT|w/o CCS,tons/MWh,0.20088
+GENeSYS-MOD 4.0,ID_2030,Thies,Emission Rate|CO2|Electricity|Gas|Fossil|OCGT|w/o CCS,tons/MWh,0.20088
+GENeSYS-MOD 4.0,ID_2030,Thies,Emission Rate|CO2|Electricity|Oil|w/o CCS,tons/MWh,0.6821289796752
+GENeSYS-MOD 4.0,ID_2030,Thies,Final Energy|Electricity,MWh/yr,2156549.9005173333
+GENeSYS-MOD 4.0,ID_2030,Thies,Fixed Cost|Electricity|Battery|Lithium-Ion,EUR/MW/yr,280.0
+GENeSYS-MOD 4.0,ID_2030,Thies,Fixed Cost|Electricity|Biomass|w/o CCS,EUR/MW/yr,41900.0
+GENeSYS-MOD 4.0,ID_2030,Thies,Fixed Cost|Electricity|Coal|Hard coal|w/o CCS,EUR/MW/yr,36000.0
+GENeSYS-MOD 4.0,ID_2030,Thies,Fixed Cost|Electricity|Coal|Lignite|w/o CCS,EUR/MW/yr,42000.0
+GENeSYS-MOD 4.0,ID_2030,Thies,Fixed Cost|Electricity|Gas|Fossil|CCGT|w/o CCS,EUR/MW/yr,21000.0
+GENeSYS-MOD 4.0,ID_2030,Thies,Fixed Cost|Electricity|Gas|Fossil|OCGT|w/o CCS,EUR/MW/yr,8000.0
+GENeSYS-MOD 4.0,ID_2030,Thies,Fixed Cost|Electricity|Hydro|Pumped Storage,EUR/MW/yr,22500.0
+GENeSYS-MOD 4.0,ID_2030,Thies,Fixed Cost|Electricity|Hydro|Run of River,EUR/MW/yr,76800.0
+GENeSYS-MOD 4.0,ID_2030,Thies,Fixed Cost|Electricity|Nuclear,EUR/MW/yr,115000.0
+GENeSYS-MOD 4.0,ID_2030,Thies,Fixed Cost|Electricity|Oil|w/o CCS,EUR/MW/yr,6510.0
+GENeSYS-MOD 4.0,ID_2030,Thies,Fixed Cost|Electricity|Solar|PV|Rooftop|Commercial,EUR/MW/yr,6660.0
+GENeSYS-MOD 4.0,ID_2030,Thies,Fixed Cost|Electricity|Solar|PV|Utility,EUR/MW/yr,12003.25
+GENeSYS-MOD 4.0,ID_2030,Thies,Fixed Cost|Electricity|Wind|Onshore,EUR/MW/yr,20000.0
+GENeSYS-MOD 4.0,ID_2030,Thies,Lifetime|Electricity|Battery|Lithium-Ion,years,20.0
+GENeSYS-MOD 4.0,ID_2030,Thies,Lifetime|Electricity|Biomass|w/o CCS,years,40.0
+GENeSYS-MOD 4.0,ID_2030,Thies,Lifetime|Electricity|Coal|Hard coal|w/o CCS,years,41.0
+GENeSYS-MOD 4.0,ID_2030,Thies,Lifetime|Electricity|Coal|Lignite|w/o CCS,years,41.0
+GENeSYS-MOD 4.0,ID_2030,Thies,Lifetime|Electricity|Gas|Fossil|CCGT|w/o CCS,years,31.0
+GENeSYS-MOD 4.0,ID_2030,Thies,Lifetime|Electricity|Gas|Fossil|OCGT|w/o CCS,years,31.0
+GENeSYS-MOD 4.0,ID_2030,Thies,Lifetime|Electricity|Hydro|Pumped Storage,years,50.0
+GENeSYS-MOD 4.0,ID_2030,Thies,Lifetime|Electricity|Hydro|Run of River,years,50.0
+GENeSYS-MOD 4.0,ID_2030,Thies,Lifetime|Electricity|Nuclear,years,61.0
+GENeSYS-MOD 4.0,ID_2030,Thies,Lifetime|Electricity|Oil|w/o CCS,years,31.0
+GENeSYS-MOD 4.0,ID_2030,Thies,Lifetime|Electricity|Solar|PV|Rooftop|Commercial,years,35.0
+GENeSYS-MOD 4.0,ID_2030,Thies,Lifetime|Electricity|Solar|PV|Utility,years,35.0
+GENeSYS-MOD 4.0,ID_2030,Thies,Lifetime|Electricity|Wind|Onshore,years,27.0
+GENeSYS-MOD 4.0,ID_2030,Thies,Secondary Energy|Electricity|Gas|Fossil|CCGT|w/o CCS,MWh/yr,1249517.7777778332
+GENeSYS-MOD 4.0,ID_2030,Thies,Secondary Energy|Electricity|Oil|w/o CCS,MWh/yr,333333.3333333333
+GENeSYS-MOD 4.0,ID_2030,Thies,Secondary Energy|Electricity|Solar|PV|Utility,MWh/yr,591640.4369395556
+GENeSYS-MOD 4.0,ID_2030,Thies,Variable Cost|Electricity|Coal|Hard coal|w/o CCS,EUR/MWh,46.99051191939781
+GENeSYS-MOD 4.0,ID_2030,Thies,Variable Cost|Electricity|Coal|Lignite|w/o CCS,EUR/MWh,244.9564622521318
+GENeSYS-MOD 4.0,ID_2030,Thies,Variable Cost|Electricity|Gas|Fossil|CCGT|w/o CCS,EUR/MWh,87.06362501554698
+GENeSYS-MOD 4.0,ID_2030,Thies,Variable Cost|Electricity|Gas|Fossil|OCGT|w/o CCS,EUR/MWh,122.6658352491798
+GENeSYS-MOD 4.0,ID_2030,Thies,Variable Cost|Electricity|Nuclear,EUR/MWh,7.309714358125768
+GENeSYS-MOD 4.0,ID_2030,Thies,Variable Cost|Electricity|Oil|w/o CCS,EUR/MWh,260.5624402189472
+GENeSYS-MOD 4.0,ID_2030,Thies,Capacity|Electricity|Wind|Onshore,MW,259.7037499720545
+GENeSYS-MOD 4.0,ID_2030,Thies,Secondary Energy|Electricity|Wind|Onshore,MWh/yr,738745.7681340277
+GENeSYS-MOD 4.0,ID_2030,Thies>Dakar,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,Thies>Dakar,Network|Electricity|Expansion Cost,EUR_2020/MW,336400.0
+GENeSYS-MOD 4.0,ID_2030,Thies>Dakar,Network|Electricity|Maximum Flow,MW,5000.0
+GENeSYS-MOD 4.0,ID_2030,Thies>Diourbel,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,Thies>Diourbel,Network|Electricity|Expansion Cost,EUR_2020/MW,441612.0
+GENeSYS-MOD 4.0,ID_2030,Thies>Diourbel,Network|Electricity|Maximum Flow,MW,1000.0
+GENeSYS-MOD 4.0,ID_2030,Thies>FKK,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,Thies>FKK,Network|Electricity|Expansion Cost,EUR_2020/MW,694665.9999999999
+GENeSYS-MOD 4.0,ID_2030,Thies>FKK,Network|Electricity|Maximum Flow,MW,3000.0
+GENeSYS-MOD 4.0,ID_2030,Thies>LS,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,Thies>LS,Network|Electricity|Expansion Cost,EUR_2020/MW,744603.9999999999
+GENeSYS-MOD 4.0,ID_2030,Thies>LS,Network|Electricity|Maximum Flow,MW,1000.0
+GENeSYS-MOD 4.0,ID_2030,Thies>MTKK,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,Thies>ZS,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,World,Capital Cost|Electricity|Battery|Lithium-Ion,EUR/MW,160000.0005184
+GENeSYS-MOD 4.0,ID_2030,World,Capital Cost|Electricity|Biomass|w/o CCS,EUR/MW,2330000.0
+GENeSYS-MOD 4.0,ID_2030,World,Capital Cost|Electricity|Coal|Hard coal|w/o CCS,EUR/MW,2758137.8619808
+GENeSYS-MOD 4.0,ID_2030,World,Capital Cost|Electricity|Coal|Lignite|w/o CCS,EUR/MW,1800000.0
+GENeSYS-MOD 4.0,ID_2030,World,Capital Cost|Electricity|Gas|Fossil|CCGT|w/o CCS,EUR/MW,698032.423533882
+GENeSYS-MOD 4.0,ID_2030,World,Capital Cost|Electricity|Gas|Fossil|OCGT|w/o CCS,EUR/MW,635677.340788036
+GENeSYS-MOD 4.0,ID_2030,World,Capital Cost|Electricity|Hydro|Pumped Storage,EUR/MW,1424245.4614799998
+GENeSYS-MOD 4.0,ID_2030,World,Capital Cost|Electricity|Hydro|Run of River,EUR/MW,2560000.0
+GENeSYS-MOD 4.0,ID_2030,World,Capital Cost|Electricity|Nuclear,EUR/MW,6000000.0
+GENeSYS-MOD 4.0,ID_2030,World,Capital Cost|Electricity|Oil|w/o CCS,EUR/MW,650000.0
+GENeSYS-MOD 4.0,ID_2030,World,Capital Cost|Electricity|Solar|PV|Rooftop|Commercial,EUR/MW,570000.0
+GENeSYS-MOD 4.0,ID_2030,World,Capital Cost|Electricity|Solar|PV|Utility,EUR/MW,380000.0
+GENeSYS-MOD 4.0,ID_2030,World,Capital Cost|Electricity|Wind|Onshore,EUR/MW,729013.064706364
+GENeSYS-MOD 4.0,ID_2030,World,Charging Efficiency|Electricity|Battery|Lithium-Ion,-,0.95
+GENeSYS-MOD 4.0,ID_2030,World,Charging Efficiency|Electricity|Hydro|Pumped Storage,-,0.866
+GENeSYS-MOD 4.0,ID_2030,World,Discharging Efficiency|Electricity|Battery|Lithium-Ion,-,0.95
+GENeSYS-MOD 4.0,ID_2030,World,Discharging Efficiency|Electricity|Hydro|Pumped Storage,-,0.866
+GENeSYS-MOD 4.0,ID_2030,World,Emission Rate|CO2|Electricity|Coal|Hard coal|w/o CCS,tons/MWh,0.67455945348696
+GENeSYS-MOD 4.0,ID_2030,World,Emission Rate|CO2|Electricity|Coal|Lignite|w/o CCS,tons/MWh,0.8290976849049599
+GENeSYS-MOD 4.0,ID_2030,World,Emission Rate|CO2|Electricity|Gas|Fossil|CCGT|w/o CCS,tons/MWh,0.20088
+GENeSYS-MOD 4.0,ID_2030,World,Emission Rate|CO2|Electricity|Gas|Fossil|OCGT|w/o CCS,tons/MWh,0.20088
+GENeSYS-MOD 4.0,ID_2030,World,Emission Rate|CO2|Electricity|Oil|w/o CCS,tons/MWh,0.6821289796752
+GENeSYS-MOD 4.0,ID_2030,World,Fixed Cost|Electricity|Battery|Lithium-Ion,EUR/MW/yr,280.0
+GENeSYS-MOD 4.0,ID_2030,World,Fixed Cost|Electricity|Biomass|w/o CCS,EUR/MW/yr,41900.0
+GENeSYS-MOD 4.0,ID_2030,World,Fixed Cost|Electricity|Coal|Hard coal|w/o CCS,EUR/MW/yr,36000.0
+GENeSYS-MOD 4.0,ID_2030,World,Fixed Cost|Electricity|Coal|Lignite|w/o CCS,EUR/MW/yr,42000.0
+GENeSYS-MOD 4.0,ID_2030,World,Fixed Cost|Electricity|Gas|Fossil|CCGT|w/o CCS,EUR/MW/yr,21000.0
+GENeSYS-MOD 4.0,ID_2030,World,Fixed Cost|Electricity|Gas|Fossil|OCGT|w/o CCS,EUR/MW/yr,8000.0
+GENeSYS-MOD 4.0,ID_2030,World,Fixed Cost|Electricity|Hydro|Pumped Storage,EUR/MW/yr,22500.0
+GENeSYS-MOD 4.0,ID_2030,World,Fixed Cost|Electricity|Hydro|Run of River,EUR/MW/yr,76800.0
+GENeSYS-MOD 4.0,ID_2030,World,Fixed Cost|Electricity|Nuclear,EUR/MW/yr,115000.0
+GENeSYS-MOD 4.0,ID_2030,World,Fixed Cost|Electricity|Oil|w/o CCS,EUR/MW/yr,6510.0
+GENeSYS-MOD 4.0,ID_2030,World,Fixed Cost|Electricity|Solar|PV|Rooftop|Commercial,EUR/MW/yr,6660.0
+GENeSYS-MOD 4.0,ID_2030,World,Fixed Cost|Electricity|Solar|PV|Utility,EUR/MW/yr,12003.25
+GENeSYS-MOD 4.0,ID_2030,World,Fixed Cost|Electricity|Wind|Onshore,EUR/MW/yr,20000.0
+GENeSYS-MOD 4.0,ID_2030,World,Lifetime|Electricity|Battery|Lithium-Ion,years,20.0
+GENeSYS-MOD 4.0,ID_2030,World,Lifetime|Electricity|Biomass|w/o CCS,years,40.0
+GENeSYS-MOD 4.0,ID_2030,World,Lifetime|Electricity|Coal|Hard coal|w/o CCS,years,41.0
+GENeSYS-MOD 4.0,ID_2030,World,Lifetime|Electricity|Coal|Lignite|w/o CCS,years,41.0
+GENeSYS-MOD 4.0,ID_2030,World,Lifetime|Electricity|Gas|Fossil|CCGT|w/o CCS,years,31.0
+GENeSYS-MOD 4.0,ID_2030,World,Lifetime|Electricity|Gas|Fossil|OCGT|w/o CCS,years,31.0
+GENeSYS-MOD 4.0,ID_2030,World,Lifetime|Electricity|Hydro|Pumped Storage,years,50.0
+GENeSYS-MOD 4.0,ID_2030,World,Lifetime|Electricity|Hydro|Run of River,years,50.0
+GENeSYS-MOD 4.0,ID_2030,World,Lifetime|Electricity|Nuclear,years,61.0
+GENeSYS-MOD 4.0,ID_2030,World,Lifetime|Electricity|Oil|w/o CCS,years,31.0
+GENeSYS-MOD 4.0,ID_2030,World,Lifetime|Electricity|Solar|PV|Rooftop|Commercial,years,35.0
+GENeSYS-MOD 4.0,ID_2030,World,Lifetime|Electricity|Solar|PV|Utility,years,35.0
+GENeSYS-MOD 4.0,ID_2030,World,Lifetime|Electricity|Wind|Onshore,years,27.0
+GENeSYS-MOD 4.0,ID_2030,ZS,Capacity|Electricity|Oil|w/o CCS,MW,12.0
+GENeSYS-MOD 4.0,ID_2030,ZS,Capital Cost|Electricity|Battery|Lithium-Ion,EUR/MW,160000.0005184
+GENeSYS-MOD 4.0,ID_2030,ZS,Capital Cost|Electricity|Biomass|w/o CCS,EUR/MW,2330000.0
+GENeSYS-MOD 4.0,ID_2030,ZS,Capital Cost|Electricity|Coal|Hard coal|w/o CCS,EUR/MW,2758137.8619808
+GENeSYS-MOD 4.0,ID_2030,ZS,Capital Cost|Electricity|Coal|Lignite|w/o CCS,EUR/MW,1800000.0
+GENeSYS-MOD 4.0,ID_2030,ZS,Capital Cost|Electricity|Gas|Fossil|CCGT|w/o CCS,EUR/MW,698032.423533882
+GENeSYS-MOD 4.0,ID_2030,ZS,Capital Cost|Electricity|Gas|Fossil|OCGT|w/o CCS,EUR/MW,635677.340788036
+GENeSYS-MOD 4.0,ID_2030,ZS,Capital Cost|Electricity|Hydro|Pumped Storage,EUR/MW,1424245.4614799998
+GENeSYS-MOD 4.0,ID_2030,ZS,Capital Cost|Electricity|Hydro|Run of River,EUR/MW,2560000.0
+GENeSYS-MOD 4.0,ID_2030,ZS,Capital Cost|Electricity|Nuclear,EUR/MW,6000000.0
+GENeSYS-MOD 4.0,ID_2030,ZS,Capital Cost|Electricity|Oil|w/o CCS,EUR/MW,650000.0
+GENeSYS-MOD 4.0,ID_2030,ZS,Capital Cost|Electricity|Solar|PV|Rooftop|Commercial,EUR/MW,570000.0
+GENeSYS-MOD 4.0,ID_2030,ZS,Capital Cost|Electricity|Solar|PV|Utility,EUR/MW,380000.0
+GENeSYS-MOD 4.0,ID_2030,ZS,Capital Cost|Electricity|Wind|Onshore,EUR/MW,729013.064706364
+GENeSYS-MOD 4.0,ID_2030,ZS,Charging Efficiency|Electricity|Battery|Lithium-Ion,-,0.95
+GENeSYS-MOD 4.0,ID_2030,ZS,Charging Efficiency|Electricity|Hydro|Pumped Storage,-,0.866
+GENeSYS-MOD 4.0,ID_2030,ZS,Discharging Efficiency|Electricity|Battery|Lithium-Ion,-,0.95
+GENeSYS-MOD 4.0,ID_2030,ZS,Discharging Efficiency|Electricity|Hydro|Pumped Storage,-,0.866
+GENeSYS-MOD 4.0,ID_2030,ZS,Emission Rate|CO2|Electricity|Coal|Hard coal|w/o CCS,tons/MWh,0.67455945348696
+GENeSYS-MOD 4.0,ID_2030,ZS,Emission Rate|CO2|Electricity|Coal|Lignite|w/o CCS,tons/MWh,0.8290976849049599
+GENeSYS-MOD 4.0,ID_2030,ZS,Emission Rate|CO2|Electricity|Gas|Fossil|CCGT|w/o CCS,tons/MWh,0.20088
+GENeSYS-MOD 4.0,ID_2030,ZS,Emission Rate|CO2|Electricity|Gas|Fossil|OCGT|w/o CCS,tons/MWh,0.20088
+GENeSYS-MOD 4.0,ID_2030,ZS,Emission Rate|CO2|Electricity|Oil|w/o CCS,tons/MWh,0.6821289796752
+GENeSYS-MOD 4.0,ID_2030,ZS,Final Energy|Electricity,MWh/yr,578255.4965003611
+GENeSYS-MOD 4.0,ID_2030,ZS,Fixed Cost|Electricity|Battery|Lithium-Ion,EUR/MW/yr,280.0
+GENeSYS-MOD 4.0,ID_2030,ZS,Fixed Cost|Electricity|Biomass|w/o CCS,EUR/MW/yr,41900.0
+GENeSYS-MOD 4.0,ID_2030,ZS,Fixed Cost|Electricity|Coal|Hard coal|w/o CCS,EUR/MW/yr,36000.0
+GENeSYS-MOD 4.0,ID_2030,ZS,Fixed Cost|Electricity|Coal|Lignite|w/o CCS,EUR/MW/yr,42000.0
+GENeSYS-MOD 4.0,ID_2030,ZS,Fixed Cost|Electricity|Gas|Fossil|CCGT|w/o CCS,EUR/MW/yr,21000.0
+GENeSYS-MOD 4.0,ID_2030,ZS,Fixed Cost|Electricity|Gas|Fossil|OCGT|w/o CCS,EUR/MW/yr,8000.0
+GENeSYS-MOD 4.0,ID_2030,ZS,Fixed Cost|Electricity|Hydro|Pumped Storage,EUR/MW/yr,22500.0
+GENeSYS-MOD 4.0,ID_2030,ZS,Fixed Cost|Electricity|Hydro|Run of River,EUR/MW/yr,76800.0
+GENeSYS-MOD 4.0,ID_2030,ZS,Fixed Cost|Electricity|Nuclear,EUR/MW/yr,115000.0
+GENeSYS-MOD 4.0,ID_2030,ZS,Fixed Cost|Electricity|Oil|w/o CCS,EUR/MW/yr,6510.0
+GENeSYS-MOD 4.0,ID_2030,ZS,Fixed Cost|Electricity|Solar|PV|Rooftop|Commercial,EUR/MW/yr,6660.0
+GENeSYS-MOD 4.0,ID_2030,ZS,Fixed Cost|Electricity|Solar|PV|Utility,EUR/MW/yr,12003.25
+GENeSYS-MOD 4.0,ID_2030,ZS,Fixed Cost|Electricity|Wind|Onshore,EUR/MW/yr,20000.0
+GENeSYS-MOD 4.0,ID_2030,ZS,Lifetime|Electricity|Battery|Lithium-Ion,years,20.0
+GENeSYS-MOD 4.0,ID_2030,ZS,Lifetime|Electricity|Biomass|w/o CCS,years,40.0
+GENeSYS-MOD 4.0,ID_2030,ZS,Lifetime|Electricity|Coal|Hard coal|w/o CCS,years,41.0
+GENeSYS-MOD 4.0,ID_2030,ZS,Lifetime|Electricity|Coal|Lignite|w/o CCS,years,41.0
+GENeSYS-MOD 4.0,ID_2030,ZS,Lifetime|Electricity|Gas|Fossil|CCGT|w/o CCS,years,31.0
+GENeSYS-MOD 4.0,ID_2030,ZS,Lifetime|Electricity|Gas|Fossil|OCGT|w/o CCS,years,31.0
+GENeSYS-MOD 4.0,ID_2030,ZS,Lifetime|Electricity|Hydro|Pumped Storage,years,50.0
+GENeSYS-MOD 4.0,ID_2030,ZS,Lifetime|Electricity|Hydro|Run of River,years,50.0
+GENeSYS-MOD 4.0,ID_2030,ZS,Lifetime|Electricity|Nuclear,years,61.0
+GENeSYS-MOD 4.0,ID_2030,ZS,Lifetime|Electricity|Oil|w/o CCS,years,31.0
+GENeSYS-MOD 4.0,ID_2030,ZS,Lifetime|Electricity|Solar|PV|Rooftop|Commercial,years,35.0
+GENeSYS-MOD 4.0,ID_2030,ZS,Lifetime|Electricity|Solar|PV|Utility,years,35.0
+GENeSYS-MOD 4.0,ID_2030,ZS,Lifetime|Electricity|Wind|Onshore,years,27.0
+GENeSYS-MOD 4.0,ID_2030,ZS,Secondary Energy|Electricity|Oil|w/o CCS,MWh/yr,83333.33333333333
+GENeSYS-MOD 4.0,ID_2030,ZS,Variable Cost|Electricity|Coal|Hard coal|w/o CCS,EUR/MWh,46.99051191939781
+GENeSYS-MOD 4.0,ID_2030,ZS,Variable Cost|Electricity|Coal|Lignite|w/o CCS,EUR/MWh,244.9564622521318
+GENeSYS-MOD 4.0,ID_2030,ZS,Variable Cost|Electricity|Gas|Fossil|CCGT|w/o CCS,EUR/MWh,87.06273010720892
+GENeSYS-MOD 4.0,ID_2030,ZS,Variable Cost|Electricity|Gas|Fossil|OCGT|w/o CCS,EUR/MWh,122.6645742419762
+GENeSYS-MOD 4.0,ID_2030,ZS,Variable Cost|Electricity|Nuclear,EUR/MWh,7.309714358125768
+GENeSYS-MOD 4.0,ID_2030,ZS,Variable Cost|Electricity|Oil|w/o CCS,EUR/MWh,260.5624402189472
+GENeSYS-MOD 4.0,ID_2030,ZS>Dakar,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,ZS>Diourbel,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,ZS>FKK,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,ZS>FKK,Network|Electricity|Expansion Cost,EUR_2020/MW,1334000.0
+GENeSYS-MOD 4.0,ID_2030,ZS>FKK,Network|Electricity|Maximum Flow,MW,500.0
+GENeSYS-MOD 4.0,ID_2030,ZS>LS,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,ZS>MTKK,Network|Electricity|Loss Factor,-,3e-05
+GENeSYS-MOD 4.0,ID_2030,ZS>MTKK,Network|Electricity|Expansion Cost,EUR_2020/MW,1655842.0
+GENeSYS-MOD 4.0,ID_2030,ZS>MTKK,Network|Electricity|Maximum Flow,MW,300.0
+GENeSYS-MOD 4.0,ID_2030,ZS>Thies,Network|Electricity|Loss Factor,-,3e-05

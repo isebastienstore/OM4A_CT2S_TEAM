@@ -1,0 +1,9 @@
+,SlackUnit,Dakar,Diourbel,Thies,LS,FKK,ZS,MTKK,Hydro|Reservoir,Electricity|Gas|Fossil|CCGT|w/o CCS,Electricity|Gas|Fossil|OCGT|w/o CCS,Electricity|Oil|w/o CCS,Solar|PV|Utility,Wind|Onshore,Hydro|Run of River
+Dakar,10000.0,,,,,,,,0,87.06362501554698,122.6658352491798,260.5624402189472,0,0,0
+Diourbel,10000.0,,,,,,,,0,,,,0,0,0
+Thies,10000.0,,,,,,,,0,87.06362501554698,,260.5624402189472,0,0,0
+LS,10000.0,,,,,,,,0,,,,0,0,0
+FKK,10000.0,,,,,,,,0,,,,0,0,0
+ZS,10000.0,,,,,,,,0,,,260.5624402189472,0,0,0
+MTKK,10000.0,,,,,,,,0,,,260.5624402189472,0,0,0
+SlackUnit,,10000.0,10000.0,10000.0,10000.0,10000.0,10000.0,10000.0,0,,,,0,0,0

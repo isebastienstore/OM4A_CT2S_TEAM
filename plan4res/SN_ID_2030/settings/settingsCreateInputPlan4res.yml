@@ -1,0 +1,207 @@
+##############################################################################
+# inputs for creating the plan4res dataset out of IAMC data
+##############################################################################
+InteractiveMode: no
+
+# list of different scenarios and years (eg. from GENeSYS-MOD results) for which we want to create a dataset
+scenario: ID_2030 #BaseYC_25_BAU 1.0.0 
+years: [2030]
+outputpath: "csv_simul/"
+
+# Regions
+#######################################
+
+# list of regions to get from data sources 
+# regional partitions in plan4res (partitions are used for coupling constraints)
+listregionsGET: ['World', 'Senegal', 'Dakar', 'Diourbel', 'Thies', 'LS', 'FKK', 'ZS', 'MTKK']
+partition:
+    Region: ['Dakar', 'Diourbel', 'Thies', 'LS', 'FKK', 'ZS', 'MTKK']
+    Countries: ['Senegal']
+    Continent: ['World']
+aggregateregions: {}
+
+# regional partitions in plan4res (partitions are used for coupling constraints)
+
+technos: # list of technologies and link to modelling in plan4res
+# thermal= modelled as ThermalUnit (TU), reservoir= modelled as HydroUnit (SS), 
+# hydrostorage/battery=modelled as ShortTermStorage (STS), res/runofriver=modelled as IntermittentUnit (RES)
+    thermal: 
+        - 'Electricity|Biomass|w/o CCS'
+        - 'Electricity|Coal|Hard coal|w/o CCS'
+        - 'Electricity|Coal|Lignite|w/o CCS'
+        - 'Electricity|Gas|Fossil|CCGT|w/o CCS'
+        - 'Electricity|Gas|Fossil|OCGT|w/o CCS'
+        - 'Electricity|Gas|w/o CCS'
+        - 'Electricity|Nuclear'
+        - 'Electricity|Oil|w/o CCS'
+    reservoir:
+        - 'Hydro|Reservoir'
+    hydrostorage: 
+        - 'Hydro|Pumped Storage'
+    battery: 
+        - 'Battery|Lithium-Ion'
+    res: 
+        - 'Solar|PV|Rooftop|Commercial'
+        - 'Solar|PV|Utility|Average'
+        - 'Solar|PV|Utility|Inf'
+        - 'Solar|PV|Utility|Opt'
+        - 'Solar|PV|Utility'
+        - 'Wind|Onshore'
+        - 'Wind|Onshore|Avg'
+        - 'Wind|Onshore|Opt'
+        - 'Wind|Offshore|Deep'
+        - 'Wind|Offshore|Shallow'
+        - 'Wind|Offshore|Transitional'
+    runofriver: 
+        - 'Hydro|Run of River'
+
+# list of the names of the scenarised timeseries for scenarised data 
+# if using plan4res scenarised data, they are named from the meteorological year
+# that was used for their creation
+StochasticScenarios: [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015]
+
+
+CouplingConstraints: # MaxPower and variable cost to use for creating slack units (units for non served)
+    # Coupling constraints which are not listed here will not be created in dataset
+    # Coupling contraints can be : Demand, Primary, Secondary, Inertia, CO2
+    # For the case of CO2, MaxPower and Cost are not needed, Budget can be defined (tons/CO2)
+    # Partition defines the level at which the coupling constraint applies
+    ActivePowerDemand: 
+        MaxPower : 1500000
+        Cost : 10000
+        Partition: 'Region'
+        SumOf: ['Total']
+    
+############################################################
+# General parameters for dataset creation
+#############################################################
+
+# list of parameters for treating the data
+ParametersCreate:
+    debug: True
+    invest: no
+    zerocapacity: 0.00001  # capacity in MW under which it is considered to be 0
+    DynamicConstraints: no  # if 'no' the dataset will not include dynamic constraints: MinPower is set to 0, StartUpCost, MinUp and Down duration are not used
+    reservoir:
+        coordinated: True # DONOTCHANGE True if you wish to optimise all reservoirs in a coordinated way, False elsewhere
+        minpowerMWh: 1  # if the volume of the reservoir is lower, converted to short term storage
+        fakeunit:
+            Region: Dakar
+            MaxPower: 100
+            MaxVolume: 100
+    InitialFillingrate:  # initial filling rates of reservoirs per countries
+        MTKK: 0.5
+    Volume2CapacityRatio:
+        Battery|Lithium-Ion: 4
+        Hydro|Pumped Storage: 50
+        Hydro|Reservoir: 3650
+    CapacityExpansion: # define capacity expansion dataset - list of technos which can be invested
+        thermal: 
+            Electricity|Gas|CCGT|w/o CCS:
+                MaxAdd: 10000
+                MaxRet: 0
+                NewCapacity: 100
+                InvestmentCost: 83180.90909
+                VariableCost: 60
+        battery:
+            Battery|Lithium-Ion:  
+                MaxAdd: 15000
+                MaxRet: 0
+                NewCapacity: 100
+                InvestmentCost: 30000
+    conversions:
+        'Mt CO2/PJ':
+            to: 't CO2/MWh'
+        'EJ/yr': 
+            to: 'MWh/yr'
+        'PJ':
+            to: 'MWh'
+        'GW':
+            to: 'MW'
+        'GWh':
+            to: 'MWh'
+        'GWh/yr':
+            to: 'MWh/yr'
+        'MEUR/GW':
+            to: 'EUR/MW'
+        'MEUR_2020/PJ':
+            to: 'MEUR/PJ'
+            factor: 1
+        'EUR_2020/GJ':
+            to: 'EUR/GJ'
+            factor: 1   
+        'MEUR/PJ':
+            to: 'EUR/MWh'
+        'EUR/GJ':
+            to: 'EUR/MWh'
+        'Mt CO2/yr':
+            to: 't CO2/yr'
+        'Mt CO2':
+            to: 't CO2'
+        'PJ/GW':
+            to: 'MWh/MW'
+        'million EUR/GW':
+            to: 'EUR/MW'
+        'EUR_2020/kW':
+            to: 'EUR/MW'
+            factor: 1000
+        'EUR_2020/kW/yr':
+            to: 'EUR/MW/yr'
+            factor: 1000
+
+listdatagroups: ['Senegal_ID_73_2030']
+datagroups:
+    Senegal_ID_73_2030:
+        model: 'GENeSYS-MOD 4.0'
+        inputdatapath: IAMC
+        regions:
+            global: 'World'  # region to be used for global data
+            local: []   # additional regions to include compared to general list
+        subannual: no
+        listvariables:
+            coupling: 
+                #mean: ['Price|Carbon']
+                flow: ['Network|Electricity|Maximum Flow','Network|Electricity|Expansion Cost','Network|Electricity|Loss Factor']
+                add: ['Final Energy|Electricity']
+            techno:
+                thermal:
+                    add: ['Capacity|','Secondary Energy|']
+                    mean: ['Variable Cost|','Capital Cost|','Fixed Cost|']
+                    global: ['Emission Rate|CO2|','Lifetime|']
+                reservoir:
+                    add: ['Capacity|Electricity|','Secondary Energy|Electricity|']
+                hydrostorage:
+                    add: ['Capacity|Electricity|','Maximum Storage|Electricity|']
+                    mean: ['Capital Cost|Electricity|','Fixed Cost|Electricity|']
+                    global: ['Charging Efficiency|Electricity|','Discharging Efficiency|Electricity|','Lifetime|Electricity|']
+                battery:
+                    add: ['Capacity|Electricity|','Maximum Storage|Electricity|']
+                    mean: ['Capital Cost|Electricity|','Fixed Cost|Electricity|']
+                    global: ['Charging Efficiency|Electricity|','Discharging Efficiency|Electricity|','Lifetime|Electricity|']
+                res:
+                    add: ['Secondary Energy|Electricity|','Capacity|Electricity|']
+                    mean: ['Capital Cost|Electricity|','Fixed Cost|Electricity|']
+                    global: ['Lifetime|Electricity|']
+                runofriver:
+                    add: ['Capacity|Electricity|','Secondary Energy|Electricity|']
+                    mean: ['Capital Cost|Electricity|','Fixed Cost|Electricity|']
+                    global: ['Lifetime|Electricity|']
+        
+
+csvfiles: # list of csv files to create in the plan4res excel file (comment line if not treated)
+    ZP_ZonePartition: 'ZP_ZonePartition.csv'  # mandatory, contains description of regions
+    IN_Interconnections: 'IN_Interconnections.csv'  # optionnal, contains description of network
+    ZV_ZoneValues: 'ZV_ZoneValues.csv' # mandatory, contains description of coupling constraints
+    TU_ThermalUnits: 'TU_ThermalUnits.csv' # optionnal, contains description of thermal units
+    SS_SeasonalStorage: 'SS_SeasonalStorage.csv' # optionnal, containsescription of seasonal storages
+    STS_ShortTermStorage: 'STS_ShortTermStorage.csv' # optionnal, contains description of short term storages
+    RES_RenewableUnits: 'RES_RenewableUnits.csv' # optionnal, contains description of renewable units
+    
+    
+# credentials for scenario explorer
+ScenarioExplorer:
+    instance: openmod4africa-internal
+    user: 'user'
+    password: 'pass'
+    annual: no
+    subannual: no

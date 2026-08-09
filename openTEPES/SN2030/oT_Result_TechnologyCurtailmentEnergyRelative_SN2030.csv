@@ -1,0 +1,4 @@
+Period,Scenario,Technology,%
+2030,sc01,RES_PV_Utility_Opt,-5.074930994640942e-18
+2030,sc01,RES_Wind_Onshore_Opt,0.0
+2030,sc01,RES_Hydro_Small,0.0

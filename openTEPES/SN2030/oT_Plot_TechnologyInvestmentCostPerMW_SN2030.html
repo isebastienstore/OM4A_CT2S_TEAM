@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-deaba84be31e0562fb27dcfd4a26ff94"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "Technology", "type": "nominal"}, "column": {"field": "Period", "type": "nominal"}, "x": {"field": "Technology", "type": "ordinal"}, "y": {"aggregate": "sum", "field": "MEUR/MW", "type": "quantitative"}}, "height": 400, "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-deaba84be31e0562fb27dcfd4a26ff94": [{"Period": 2030, "Technology": "P_Gas_OCGT", "MEUR/MW": 0.023584905546857406}, {"Period": 2030, "Technology": "RES_PV_Utility_Opt", "MEUR/MW": 0.11684949487999344}, {"Period": 2030, "Technology": "RES_Wind_Onshore_Opt", "MEUR/MW": 0.003762376200372513}, {"Period": 2030, "Technology": "P_Gas_CCGT", "MEUR/MW": 0.014457592687927923}]}};
+      var embedOpt = {"renderer": "svg", "mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

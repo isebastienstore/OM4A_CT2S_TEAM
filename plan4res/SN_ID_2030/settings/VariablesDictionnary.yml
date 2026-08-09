@@ -1,0 +1,127 @@
+# Dictionnary of variables
+# Output: define which is the variable name in IAMC format corresponding to plan4EU variables
+# Input: define which IAMC variables to use to create plan4EU inputs
+Output:
+    Demand: 'Final Energy|Electricity'
+    MarginalCost: 'Marginal Cost|Final Energy|Electricity'
+    Generation: 'Active Power|Electricity'
+    Energy: 'Secondary Energy|Electricity'
+    OperationCost: 'Operation Cost|Electricity'
+    Capacity: 'Capacity|Electricity'
+    CapacityBattery: 'Maximum Charge|Electricity|Energy Storage System'
+    VariableCost: 'Variable Cost (incl. Fuel Cost)|Electricity'
+    StartUpCost: 'Start-Up Cost|Electricity'
+    Volume: 'Storage|Electricity|Hydro|Reservoir'
+    Pump: 'Injected Energy|Electricity'
+    EnergyFromPumping: 'Discharged Energy|Electricity'
+    Flow: 'Flow|Electricity'
+    TechnoLongNames:
+        reservoir: 'Hydro|'
+        hydrostorage: 'Hydro|'
+        battery: 'Energy Storage System|'
+    Import: 'Import|Electricity'
+    Export: 'Export|Electricity'
+    Slack: 'Non served Demand|Electricity'
+Input:
+# comment variables which are not mandatory
+    VarIN:  # variables related to interconnections
+        MaxPowerFlow: 'Network|Electricity|Maximum Flow'
+        InvestmentCost: 'Network|Electricity|Expansion Cost'
+        LossFactor: 'Network|Electricity|Loss Factor'
+    VarZV: # variables related to coupling constraints (demand, inertia, system services,...)
+        Total: 'Final Energy|Electricity'
+        ElecHeating: 'Final Energy|Electricity|Heating'
+        Cooking: 'Final Energy|Electricity|Cooking'
+        AirCondition: 'Final Energy|Electricity|Cooling'
+        ElecVehicle: 'Final Energy|Electricity|Transportation'
+        OtherExclHeatTransp: 'Final Energy|Electricity|Other (excl. Heating, Transport)'
+        OtherExclHeatTranspCooking: 'Final Energy|Electricity|Other (excl. Heating, Transport, Cooking)'
+        OtherExclHeatCoolTransp: 'Final Energy|Electricity|Other (excl. Heating, Cooling, Transport)'  
+        #PrimaryDemand: 'Network|Electricity|Reserve|Requirement|Frequency Containment'
+        #SecondaryDemand: 'Network|Electricity|Reserve|Requirement|Automatic Frequency Restoration'
+        #Inertia: 'Network|Electricity|Requirement|Inertia'
+        #Hydrogen: 'Final Energy|Electricity|Electrolyzer'    
+    VarTU: # VarTU: list of variables for the thermal generation mix
+        Capacity: 'Capacity|'
+        #VariableCost: 'Variable Cost|Electricity|' # mandatory / if not present cost=0
+        VariableCost: 'Variable Cost|'
+        FixedCost: 'Fixed Cost|' # mandatory if dataset used for capacity expansion
+        CapitalCost: 'Capital Cost|' # mandatory if dataset used for capacity expansion
+        # MaxPower: 'Maximum Active Power|Electricity|' # optional - max power of individual units - used when running model with disaggregated units
+        # MinPower: 'Minimum Active Power|Electricity|' # optional - min power of individual units - used when running model with disaggregated units and dynamic constraints
+        # StartUpCost: 'Start-Up Cost|Electricity|' # optional - start-up cost of unit - - used when running model with disaggregated units and dynamic constraints
+        # MinDownTime: 'Minimum Off Duration|Electricity|' # optional - minimum time down - used when running model with disaggregated units and dynamic constraints
+        # MinUpTime: 'Minimum On Duration|Electricity|' # optional - minimum time up - used when running model with disaggregated units and dynamic constraints
+        # Inertia: 'Inertia|Electricity|' # optional - inertia provided by the unit when on - used when running model with inertia constraints
+        # PrimaryRho: 'Frequency Containment Reserve|Electricity|' # optional - max share of maxpower that can be devoted to primary reserve  - used when running model with primary reserve constraints
+        # SecondaryRho: 'Automatic Frequency Restoration Reserve|Electricity|' # optional - max share of maxpower that can be devoted to secondary reserve  - used when running model with secondary reserve constraints
+        # #UnavailabilityRate, MaintenanceRate and MeanUnavailabilityDuration will be used in further version for computing availability profiles
+        # UnavailabilityRate: 'Forced Outage Rate|Electricity|'
+        # MaintenanceRate: 'Planned Outage Rate|Electricity|'
+        # MeanUnavailabilityDuration: 'Mean Outage Duration|Electricity|'
+        # # Only one of both variables is necessary as CO2Rate=CO2Emission/Energy
+        # CO2Emission: 'Emissions|CO2|Electricity|' #max allowed CO2 emitted in a specific region
+        CO2Rate: 'Emission Rate|CO2|' #rate of CO2 emissions ie tons emitted per MWh produced
+        # #Efficiency and Price are used for cases where the variable cost is based on a Price and Efficiency
+        # Efficiency: 'Efficiency|' # optional - efficiency of energy conversion (between fuel and power)
+        # Price: 'Price|' # optional - fuel price
+        Energy: 'Secondary Energy|' # optional - secondary energy generated by the current techno - not used for computing dataset but may be usefull for analysing results
+        LifeTime: 'Lifetime|' # mandatory if dataset used for capacity expansion
+        #MaxCapacity: 'Maximum Capacity|' # mandatory if dataset used for capacity expansion
+        #AvailabilityRate: 'Maximum Utilization|' # mandatory if dataset used for capacity expansion                                                                                           
+    VarSS: # variables used for creating the hydro seasonal storage generation mix
+        #VolumeRate: 'Maximum Utilization|Electricity|' 
+        MaxPower: 'Capacity|Electricity|' # Capacity - mandatory variable  
+        MaxVolume: 'Maximum Storage|Electricity|' # Maximum storage - mandatory variable
+        Inflows: 'Secondary Energy|Electricity|' # Inflows are set equal to the secondary energy produced - mandatory variable
+        Energy: 'Secondary Energy|Electricity|' # Inflows are set equal to the secondary energy produced - mandatory variable
+        # Inertia: 'Inertia|Electricity|' # Inertia that can be provided to the system - optional - used only if inertia constraints are modelled
+        # PrimaryRho: 'Frequency Containment Reserve|Electricity|' # share of maxPower that can be devoted to primary reserve - optional - used only if primary constraints are modelled
+        # SecondaryRho: 'Automatic Frequency Restoration Reserve|Electricity|' # share of maxPower that can be devoted to primary reserve - optional - used only if primary constraints are modelled
+    VarSTS|Hydro: # variables used for creating the pumped storage generation mix
+        # Energy: 'Secondary Energy|Electricity|' # energy provided by the techno - optional - not used in modelling
+        # # both capacity or MaxVolume must be present. The not present variable can be computed using parameter in config file
+        Capacity: 'Capacity|Electricity|' # capacity
+        Volume2CapacityRatio: 'Energy to Power Ratio|Electricity|' #used to compute volume of reservoir from capacity
+        MaxPower: 'Capacity|Electricity|' # capacity 
+        MaxVolume: 'Maximum Storage|Electricity|' # maximum storage 
+        PumpingEfficiency: 'Pumping Efficiency|Electricity|' # Pumping efficiency - if not present, parameter from config file is used
+        ChargingEfficiency: 'Charging Efficiency|Electricity|' # Pumping efficiency - if not present, parameter from config file is used
+        DischargingEfficiency: 'Discharging Efficiency|Electricity|' # Pumping efficiency - if not present, parameter from config file is used
+        # Inertia: 'Inertia|Electricity|' # inertia that can be provided to the system - optional - used only if inertia constraints are modelled
+        # PrimaryRho: 'Frequency Containment Reserve|Electricity|' # share of maxpower that can be provided to primary reserve - optional - used only if primary constraints are modelled
+        # SecondaryRho: 'Automatic Frequency Restoration Reserve|Electricity|' # share of maxpower that can be provided to secondary reserve - optional - used only if secondary constraints are modelled
+        CapitalCost: 'Capital Cost|Electricity|'
+        FixedCost: 'Fixed Cost|Electricity|' # mandatory if dataset used for capacity expansion
+        LifeTime: 'Lifetime|Electricity|' # mandatory if dataset used for capacity expansion
+        #MaxCapacity: 'Maximum Capacity|Electricity|' # mandatory if dataset used for capacity expansion
+        #AvailabilityRate: 'Maximum Utilization|Electricity|' # mandatory if dataset used for capacity expansion
+    VarSTS|Battery: # variables used for creating the batteries mix
+        # # both capacity or MaxVolume must be present. The not present variable can be computed using parameter in config file
+        Capacity: 'Capacity|Electricity|'
+        #MaxCapacity: 'Maximum Capacity|Electricity|'
+        MaxPower: 'Capacity|Electricity|' # capacity
+        MaxVolume: 'Maximum Storage|Electricity|' # maximum storage
+        MinPower: 'Maximum Charge|Electricity|' # Maximum possible charge 
+        RoundTripEfficiency: 'Roundtrip Efficiency|Electricity|' # Pumping efficiency - if not present, charging / discharging are user
+        TurbineEfficiency: 'Charging Efficiency|Electricity|' # if not present parameter from setting file is used
+        PumpingEfficiency: 'Discharging Efficiency|Electricity|' # if not present parameter from setting file is used
+        # Inertia: 'Inertia|Electricity|' # inertia that can be provided to the system - optional - used only if inertia constraints are modelled
+        # PrimaryRho: 'Frequency Containment Reserve|Electricity|' # maxpower that can be provided to primary reserve - optional - used only if primary constraints are modelled
+        # SecondaryRho: 'Automatic Frequency Restoration Reserve|Electricity|' # maxpower that can be provided to secondary reserve - optional - used only if secondary constraints are modelled
+        CapitalCost: 'Capital Cost|Electricity|'
+        FixedCost: 'Fixed Cost|Electricity|' # mandatory if dataset used for capacity expansion
+        LifeTime: 'Lifetime|Electricity|' # mandatory if dataset used for capacity expansion
+        #AvailabilityRate: 'Maximum Utilization|Electricity|' # mandatory if dataset used for capacity expansion
+    VarRES: # variable used for creating the intermittent renewable mix (PV, wind, run of river)
+        #MaxCapacity: 'Maximum Capacity|Electricity|'
+        MaxPower: 'Capacity|Electricity|' # capacity - mandatory
+        Capacity: 'Capacity|Electricity|'
+        Energy: 'Secondary Energy|Electricity|' # energy produced - used for creating run of river time series
+        # Inertia: 'Inertia|Electricity|' # optional - inertia provided by the unit when on - used when running model with inertia constraints
+        # PrimaryRho: 'Frequency Containment Reserve|Electricity|' # optional - max share of maxpower that can be devoted to primary reserve  - used when running model with primary reserve constraints
+        # SecondaryRho: 'Automatic Frequency Restoration Reserve|Electricity|' # optional - max share of maxpower that can be devoted to secondary reserve  - used when running model with secondary reserve constraints
+        CapitalCost: 'Capital Cost|Electricity|' # investment cost - used if running capacity expansion
+        FixedCost: 'Fixed Cost|Electricity|' # mandatory if dataset used for capacity expansion
+        LifeTime: 'Lifetime|Electricity|' # mandatory if dataset used for capacity expansion        
+        #AvailabilityRate: 'Maximum Utilization|Electricity|' # mandatory if dataset used for capacity expansion

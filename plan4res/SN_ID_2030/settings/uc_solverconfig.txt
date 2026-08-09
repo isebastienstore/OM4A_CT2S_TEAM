@@ -1,0 +1,37 @@
+BlockSolverConfig # The name of the configuration
+
+1 # The BlockSolverConfig is "differential"
+1 # The number of Solvers
+
+# Now all the names of the Solvers
+#CPXMILPSolver
+#SCIPMILPSolver
+GRBMILPSolver
+#CPXMILPSolver
+
+1 # The number of ComputeConfigs
+
+# Now all the ComputeConfigs
+# 1st --------------------------------------
+ComputeConfig # Type of the object
+1 # differential
+
+3 # Number of integer parameters
+intLogVerb 0
+intRelaxIntVars 1 # 1 if integer constraints are relaxes, else 0
+intConsModification 0
+
+2 # Number of double parameters
+dblAAccSol 5e-04
+dblMaxTime 2000
+
+1 # Number of string parameters
+strOutputFile uc.lp
+
+0 # number of vector-of-int parameters
+0 # number of vector-of-double parameters
+0 # number of vector-of-string parameters
+
+# Pointer to the "extra" Configuration
+# [none]
+# 1st END ----------------------------------

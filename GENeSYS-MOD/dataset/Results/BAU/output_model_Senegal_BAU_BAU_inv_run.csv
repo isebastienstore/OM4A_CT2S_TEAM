@@ -1,0 +1,3 @@
+Type,PathwayScenario,Pathway,Scenario,Value
+":Type => ""Objective Value""",":PathwayScenario => ""BAU_BAU""",":Pathway => ""BAU""",":Scenario => ""BAU""",:Value => 98859.11407952869
+":Type => ""Elapsed Time""",":PathwayScenario => ""BAU_BAU""",":Pathway => ""BAU""",":Scenario => ""BAU""",:Value => Dates.Millisecond(1491670)

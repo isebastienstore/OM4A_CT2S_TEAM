@@ -1,0 +1,93 @@
+#Settings for plan4res format.py
+#
+#########################################
+debug: True
+outputDir: "nc4_simul/"
+inputDir: "csv_simul//"
+
+# the variable FormatMode defines what the formatting tool will do
+# FormatMode= SingleUC : generates ONE UCBlock for the first period (first SSVTimestep) of the dataset
+# FormatMode= UC : generates a serie of UCBlocks for each period (each SSVTimestep) of the dataset
+# FormatMode= SDDP : generates only the SDDPBlock
+# FormatMode= SDDPandUC : generates the SDDPBlock and all the UCBlocks
+# FormatMode= INVEST : generates the InvestmentBlock 
+# FormatMode= INVESTandSDDP : generates the InvestmentBlock and the SDDPBlock
+# FormatMode= INVESTandSDDPandUC : generates the InvestmentBlock and the SDDPBlock and all the UCBlocks
+FormatMode: "INVESTandSDDPandUC"
+
+# the variable FormatVU defines the input for Bellman values
+# FormatVU= None : no bellman values are used as input
+# FormatVU= PerReservoir :  bellman values computed independently reservoir per reservoir are used
+# In this case all bellmanvalue files in the same hydrosystem must have the same number of volume steps
+# the format of bellman values files for each upstream reservoir is 3 columns : dates, volume steps, corresponding bellman values
+# the names of the columns must be Volume and Value
+# FormatVU= Polyhedral :  A polyhedral function is used: \sum_i a_i*x_i+b (x_i being the volume of reservoir i)
+# in this case there should exist one datafile per hydrosystem
+# the format of this file is  2+N columns where N is the number of reservoirs: 
+# first column: dates, 1 column per reservoir with the a coefficients, 1 column with value of b
+# the names of the columns must be a_i (i from 0 to Number of reservoirs -1), and b
+FormatVU: Polyhedral
+
+# the variable IncludeVU defines when to include external water values in input
+# IncludeVU= None : no bellman values are used as input
+# IncludeVU= Last :  water values included only in the last Block
+# IncludeVU= All :  water values included in all blocks
+IncludeVU: All 
+
+# the variable Invest defines if additionnal constraints are created for the investment optimisation
+# Invest= Simple : no additional constraints are created
+# Invest= NRJ : regions are autonomous in energy (ie the amount of energy is sufficient for each node)
+# Invest= TargetRES: each region has a target of renewable energies
+Invest: Simple
+
+# dates information:
+# - dayfirst: True if the format is giving the day first (01/07/2050 means first of july)
+# - BeginTimeSeries : first day of the datasets
+# - EndTimeSeries : last day of the datasets
+# - BeginDataset : first day of the instance to create
+# - EndDataset: last day of the instance to create
+Calendar:
+    dayfirst: True
+    BeginTimeSeries: '01/01/2050  00:00:00'   # timescale where timeseries are available
+    EndTimeSeries: '31/12/2050  23:00:00'   # timescale where timeseries are available
+    BeginDataset: '01/01/2030  00:00:00'
+    EndDataset: '31/12/2030  23:00:00'
+    SSVTimeStep:  # duration of a timeset for the SDDP = duration of a unit commitment problem
+        Unit: hours
+        Duration: 168
+    TimeStep:  # duration of timesteps 
+        Unit: hours
+        Duration: 1
+
+# IncludeScenarisedData: True => the scenarised data are included in the blocks, 
+# IncludeScenarisedData: False => the scenarised data are  filled with 0
+IncludeScenarisedData: True 
+        
+ParametersFormat: 
+    DownReservoirVolumeMultFactor: 2  # mult factor for computing the size of virtual downstream reservoir from max volume of upstream reservoir
+    DownDeltaRampUpMultFactor: 100 # mult factor for computing the max ramp up of virtual downstream reservoir from ramp up of upstream reservoir
+    DownDeltaRampDownMultFactor: 100 # mult factor for computing the max ramp down of virtual downstream reservoir from ramp down of upstream reservoir
+    NumberHoursInYear: 8760
+    InertiaMultFactor: 1.2 # mult factor for computing inertia contributions
+    Scenarios: [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015] # list of scenarios to include in the instance (names of scenarios)
+
+    # ScenarisedData contains the list of scenarised data, among 'ActivePowerDemand','Hydro:Inflows','Renewable:MaxPowerProfile' and 'Thermal:MaxPowerProfile'
+    ScenarisedData: 
+        'ActivePowerDemand': 
+            MultiplyTimeSerieBy: 'Energy'
+        'Hydro:Inflows': 
+            MultiplyTimeSerieBy: 
+                reservoir: 'Energy'
+        'Renewable:MaxPowerProfile':
+            MultiplyTimeSerieBy: 
+                res: 'Power'
+                runofriver: 'Energy' 
+    
+    ThermalMaxPowerTimeSpan: # frequency of the data for scenarised thermal max power profiles
+        Unit: hours
+        Duration: 168
+    CoeffSpillage: 3  # it is allowed to spill CoeffSpillage*Maximum Flow
+    LowerBound: 0.0 # optional: lower bound for SDDP
+    
+# data can be given as an excel file plus additional csv time series, or as a set of csv files
+inputformat: csv # excel or csv

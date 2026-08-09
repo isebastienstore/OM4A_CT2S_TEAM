@@ -1,0 +1,20 @@
+# General Settings for plan4res runs
+#
+#########################################
+
+# parameters for SSV runs
+NumberSSVIterationsFirstStep: 12  # when ran in 2 steps, max number of iterations of the first step
+NumberSSVIterations: 100  # max number of iterations if only one step, or max number of iterations in the final step when ran in 2 steps
+CheckConvEachXIterInFirstStep: 10  # convergence is checked after X SSV iterations in the first step
+CheckConvEachXIter: 1  # convergence is checked after X SSV iterations in the one step SSV or in the final step of 2 steps SSV
+EpsilonSSV: 0.01
+
+# parameters for CEM runs
+NumberOfCemIterationsInLoopCEM: 10 # max number of iterations in each run of CEM when CEM is launched using a loop of ssv/cem 
+NumberOfCemIterations: 50 # max number of iterations in each run of CEM when CEM is not launched using a loop of ssv/cem or in the last CEM run when launched using a loop
+MaxNumberOfLoops: 15 # max number iterations ssv/cem when CEM is launched using a loop of ssv/cem
+EpsilonCEM: 0.1 # convergence criteria for CEM when launched in ssv/cem loop
+Distance: 2 # choice of distance computation for CEM when launched in ssv/cem loop. distance can be 2,3 -default= 2-  2= distance between initial capacity and invested capacity is used for checking convergence. 3= distance between cost of investment solution at last 2 iterations is used for checking 
+ScenariosLists: list_scenarios.txt # config file for running cem in sequence on different lists of scenarios
+
+

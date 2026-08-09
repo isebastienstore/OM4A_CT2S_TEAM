@@ -1,0 +1,98 @@
+#Settings for plan4res format.py
+#
+#########################################
+outputDir: 'nc4_optim/'
+inputDir: 'csv_simul/'
+resultsDir: 'results_invest/' # repository where all results are in subdirectories mydirectory/variant/  or mydirectory/variant-option/
+investDir: 'csv_invest/'
+
+# the variable FormatMode defines what the formatting tool will do
+# FormatMode= SingleUC : generates ONE UCBlock for the first period (first SSVTimestep) of the dataset
+# FormatMode= UC : generates a serie of UCBlocks for each period (each SSVTimestep) of the dataset
+# FormatMode= SDDP : generates only the SDDPBlock
+# FormatMode= SDDPandUC : generates the SDDPBlock and all the UCBlocks
+# FormatMode= INVEST : generates the InvestmentBlock 
+# FormatMode= INVESTandSDDP : generates the InvestmentBlock and the SDDPBlock
+# FormatMode= INVESTandSDDPandUC : generates the InvestmentBlock and the SDDPBlock and all the UCBlocks
+FormatMode: SDDPandUC
+
+# the variable FormatVU defines the input for Bellman values
+# FormatVU= None : no bellman values are used as input
+# FormatVU= PerReservoir :  bellman values computed independently reservoir per reservoir are used
+# In this case all bellmanvalue files in the same hydrosystem must have the same number of volume steps
+# the format of bellman values files for each upstream reservoir is 3 columns : dates, volume steps, corresponding bellman values
+# the names of the columns must be Volume and Value
+# FormatVU= Polyhedral :  A polyhedral function is used: \sum_i a_i*x_i+b (x_i being the volume of reservoir i)
+# in this case there should exist one datafile per hydrosystem
+# the format of this file is  2+N columns where N is the number of reservoirs: 
+# first column: dates, 1 column per reservoir with the a coefficients, 1 column with value of b
+# the names of the columns must be a_i (i from 0 to Number of reservoirs -1), and b
+FormatVU: Polyhedral
+
+# the variable IncludeVU defines when to include external water values in input
+# IncludeVU= None : no bellman values are used as input
+# IncludeVU= Last :  water values included only in the last Block
+# IncludeVU= All :  water values included in all blocks
+IncludeVU: None
+
+# the variable Invest defines if additionnal constraints are created for the investment optimisation
+# Invest= Simple : no additional constraints are created
+# Invest= NRJ : regions are autonomous in energy (ie the amount of energy is sufficient for each node)
+# Invest= TargetRES: each region has a target of renewable energies
+Invest: Simple
+
+# dates information:
+# - dayfirst: True if the format is giving the day first (01/07/2050 means first of july)
+# - BeginTimeSeries : first day of the datasets
+# - EndTimeSeries : last day of the datasets
+# - BeginDataset : first day of the instance to create
+# - EndDataset: last day of the instance to create
+Calendar:
+    dayfirst: True 
+    BeginTimeSeries: '01/01/2050  00:00:00'   # timescale where timeseries are available
+    EndTimeSeries: '31/12/2050  23:00:00'   # timescale where timeseries are available
+    BeginDataset: '02/07/2030  00:00:00'
+    EndDataset: '30/06/2032  23:00:00'
+    SSVTimeStep:  # duration of a timeset for the SDDP = duration of a unit commitment problem
+        Unit: hours
+        Duration: 168
+    TimeStep:  # duration of timesteps 
+        Unit: hours
+        Duration: 3
+
+# IncludeScenarisedData: True => the scenarised data are included in the blocks, 
+# IncludeScenarisedData: False => the scenarised data are  filled with 0
+IncludeScenarisedData: True 
+        
+ParametersFormat: 
+    DownReservoirVolumeMultFactor: 2  # mult factor for computing the size of virtual downstream reservoir from max volume of upstream reservoir
+    DownDeltaRampUpMultFactor: 100 # mult factor for computing the max ramp up of virtual downstream reservoir from ramp up of upstream reservoir
+    DownDeltaRampDownMultFactor: 100 # mult factor for computing the max ramp down of virtual downstream reservoir from ramp down of upstream reservoir
+    NumberHoursInYear: 8760
+    InertiaMultFactor: 1.2 # mult factor for computing inertia contributions
+    #Scenarios: ['2020_0','2021_0','2022_0','2023_0','2024_0','2025_0','2026_0','2027_0','2028_0','2029_0','2030_0','2031_0','2032_0','2033_0','2034_0','2035_0','2036_0','2037_0','2038_0','2039_0','2040_0','2020_1','2021_1','2022_1','2023_1','2024_1','2025_1','2026_1','2027_1','2028_1','2029_1','2030_1','2031_1','2032_1','2033_1','2034_1','2035_1','2036_1','2037_1','2038_1','2039_1','2040_1','2020_2','2021_2','2022_2','2023_2','2024_2','2025_2','2026_2','2027_2','2028_2','2029_2','2030_2','2031_2','2032_2','2033_2','2034_2','2035_2','2036_2','2037_2','2038_2','2039_2','2040_2','2020_3','2021_3','2022_3','2023_3','2024_3','2025_3','2026_3','2027_3','2028_3','2029_3','2030_3','2031_3','2032_3','2033_3','2034_3','2035_3','2036_3','2037_3','2038_3','2039_3','2040_3','2020_4','2021_4','2022_4','2023_4','2024_4','2025_4','2026_4','2027_4','2028_4','2029_4','2030_4','2031_4','2032_4','2033_4','2034_4','2035_4','2036_4','2037_4','2038_4','2039_4','2040_4']
+    #Scenarios: ['2020_0','2021_0','2022_0','2023_0','2024_0','2025_0','2026_0','2027_0','2028_0','2029_0','2030_0','2031_0','2032_0','2033_0','2034_0','2035_0','2036_0','2037_0','2038_0','2039_0','2040_0','2020_1','2021_1','2022_1','2023_1','2024_1','2025_1','2026_1','2027_1','2028_1','2029_1','2030_1','2031_1','2032_1','2033_1','2034_1','2035_1','2036_1','2037_1','2038_1','2039_1','2040_1','2020_2','2021_2','2022_2','2023_2','2024_2','2025_2','2026_2','2027_2','2028_2','2029_2','2030_2','2031_2','2032_2','2033_2','2034_2','2035_2','2036_2','2037_2','2038_2','2039_2','2040_2','2020_3','2021_3','2022_3','2023_3','2024_3','2025_3','2026_3','2027_3','2028_3','2029_3','2030_3','2031_3','2032_3','2033_3','2034_3','2035_3','2036_3','2037_3','2038_3','2039_3','2040_3']
+    Scenarios: ['2020_0','2021_0','2022_0','2023_0','2024_0','2025_0','2026_0','2027_0','2028_0','2029_0','2030_0','2031_0','2032_0','2033_0','2034_0','2035_0','2036_0','2037_0','2038_0','2039_0','2040_0']
+
+    # ScenarisedData contains the list of scenarised data, among 'ActivePowerDemand','Hydro:Inflows','Renewable:MaxPowerProfile' and 'Thermal:MaxPowerProfile'
+    ScenarisedData: 
+        'ActivePowerDemand': 
+            MultiplyTimeSerieBy: 'Energy'
+        'Hydro:Inflows': 
+            MultiplyTimeSerieBy: 
+                reservoir: 'Energy'
+        'Renewable:MaxPowerProfile':
+            MultiplyTimeSerieBy: 
+                res: 'Power'
+                runofriver: 'Energy' 
+    
+    ThermalMaxPowerTimeSpan: # frequency of the data for scenarised thermal max power profiles
+        Unit: hours
+        Duration: 168
+    CoeffSpillage: 3  # it is allowed to spill CoeffSpillage*Maximum Flow
+    LowerBound: 0.0 # optional: lower bound for SDDP
+    RecomputeCSV: True
+    RoundDecimals: 1 # number of decimals after comma
+    
+# data can be given as an excel file plus additional csv time series, or as a set of csv files
+inputformat: csv # excel or csv

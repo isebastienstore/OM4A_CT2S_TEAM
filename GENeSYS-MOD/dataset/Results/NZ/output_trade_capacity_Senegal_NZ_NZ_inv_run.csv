@@ -1,0 +1,198 @@
+Region,Region2,Type,Year,Value
+Thies,Dakar,Power Transmissions Capacity,2022,5.0
+Thies,Dakar,Power Transmissions Capacity,2025,5.0
+Thies,Dakar,Power Transmissions Capacity,2030,5.0
+Thies,Dakar,Power Transmissions Capacity,2035,5.0
+Thies,Dakar,Power Transmissions Capacity,2040,5.0
+Thies,Dakar,Power Transmissions Capacity,2045,5.0
+Thies,Dakar,Power Transmissions Capacity,2050,5.0
+Thies,Diourbel,Power Transmissions Capacity,2022,1.0
+Thies,Diourbel,Power Transmissions Capacity,2025,1.0
+Thies,Diourbel,Power Transmissions Capacity,2030,1.0
+Thies,Diourbel,Power Transmissions Capacity,2035,1.0
+Thies,Diourbel,Power Transmissions Capacity,2040,1.0
+Thies,Diourbel,Power Transmissions Capacity,2045,1.0
+Thies,Diourbel,Power Transmissions Capacity,2050,1.0
+Dakar,Thies,Power Transmissions Capacity,2022,5.0
+Dakar,Thies,Power Transmissions Capacity,2025,5.0
+Dakar,Thies,Power Transmissions Capacity,2030,5.0
+Dakar,Thies,Power Transmissions Capacity,2035,5.0
+Dakar,Thies,Power Transmissions Capacity,2040,5.0
+Dakar,Thies,Power Transmissions Capacity,2045,5.0
+Dakar,Thies,Power Transmissions Capacity,2050,5.0
+Diourbel,Thies,Power Transmissions Capacity,2022,1.0
+Diourbel,Thies,Power Transmissions Capacity,2025,1.0
+Diourbel,Thies,Power Transmissions Capacity,2030,1.0
+Diourbel,Thies,Power Transmissions Capacity,2035,1.0
+Diourbel,Thies,Power Transmissions Capacity,2040,1.0
+Diourbel,Thies,Power Transmissions Capacity,2045,1.0
+Diourbel,Thies,Power Transmissions Capacity,2050,1.0
+LS,Thies,Power Transmissions Capacity,2022,1.0
+LS,Thies,Power Transmissions Capacity,2025,1.0
+LS,Thies,Power Transmissions Capacity,2030,1.0
+LS,Thies,Power Transmissions Capacity,2035,1.0
+LS,Thies,Power Transmissions Capacity,2040,1.0
+LS,Thies,Power Transmissions Capacity,2045,1.0
+LS,Thies,Power Transmissions Capacity,2050,1.0
+FKK,Thies,Power Transmissions Capacity,2022,3.0
+FKK,Thies,Power Transmissions Capacity,2025,3.0
+FKK,Thies,Power Transmissions Capacity,2030,3.0
+FKK,Thies,Power Transmissions Capacity,2035,3.0
+FKK,Thies,Power Transmissions Capacity,2040,3.0
+FKK,Thies,Power Transmissions Capacity,2045,3.0
+FKK,Thies,Power Transmissions Capacity,2050,3.0
+Thies,LS,Power Transmissions Capacity,2022,1.0
+Thies,LS,Power Transmissions Capacity,2025,1.0
+Thies,LS,Power Transmissions Capacity,2030,1.0
+Thies,LS,Power Transmissions Capacity,2035,1.0
+Thies,LS,Power Transmissions Capacity,2040,1.0
+Thies,LS,Power Transmissions Capacity,2045,1.0
+Thies,LS,Power Transmissions Capacity,2050,1.0
+Thies,FKK,Power Transmissions Capacity,2022,3.0
+Thies,FKK,Power Transmissions Capacity,2025,3.0
+Thies,FKK,Power Transmissions Capacity,2030,3.0
+Thies,FKK,Power Transmissions Capacity,2035,3.0
+Thies,FKK,Power Transmissions Capacity,2040,3.0
+Thies,FKK,Power Transmissions Capacity,2045,3.0
+Thies,FKK,Power Transmissions Capacity,2050,3.0
+ZS,FKK,Power Transmissions Capacity,2022,0.5
+ZS,FKK,Power Transmissions Capacity,2025,0.5
+ZS,FKK,Power Transmissions Capacity,2030,0.5
+ZS,FKK,Power Transmissions Capacity,2035,0.5
+ZS,FKK,Power Transmissions Capacity,2040,0.5
+ZS,FKK,Power Transmissions Capacity,2045,0.5
+ZS,FKK,Power Transmissions Capacity,2050,0.5
+MTKK,FKK,Power Transmissions Capacity,2022,0.5
+MTKK,FKK,Power Transmissions Capacity,2025,0.5
+MTKK,FKK,Power Transmissions Capacity,2030,0.5
+MTKK,FKK,Power Transmissions Capacity,2035,0.5
+MTKK,FKK,Power Transmissions Capacity,2040,0.5
+MTKK,FKK,Power Transmissions Capacity,2045,0.5
+MTKK,FKK,Power Transmissions Capacity,2050,0.5
+FKK,ZS,Power Transmissions Capacity,2022,0.5
+FKK,ZS,Power Transmissions Capacity,2025,0.5
+FKK,ZS,Power Transmissions Capacity,2030,0.5
+FKK,ZS,Power Transmissions Capacity,2035,0.5
+FKK,ZS,Power Transmissions Capacity,2040,0.5
+FKK,ZS,Power Transmissions Capacity,2045,0.5
+FKK,ZS,Power Transmissions Capacity,2050,0.5
+MTKK,ZS,Power Transmissions Capacity,2022,0.3
+MTKK,ZS,Power Transmissions Capacity,2025,0.3
+MTKK,ZS,Power Transmissions Capacity,2030,0.3
+MTKK,ZS,Power Transmissions Capacity,2035,0.3
+MTKK,ZS,Power Transmissions Capacity,2040,0.3
+MTKK,ZS,Power Transmissions Capacity,2045,0.3
+MTKK,ZS,Power Transmissions Capacity,2050,0.3
+FKK,MTKK,Power Transmissions Capacity,2022,0.5
+FKK,MTKK,Power Transmissions Capacity,2025,0.5
+FKK,MTKK,Power Transmissions Capacity,2030,0.5
+FKK,MTKK,Power Transmissions Capacity,2035,0.5
+FKK,MTKK,Power Transmissions Capacity,2040,0.5
+FKK,MTKK,Power Transmissions Capacity,2045,0.5
+FKK,MTKK,Power Transmissions Capacity,2050,0.5
+ZS,MTKK,Power Transmissions Capacity,2022,0.3
+ZS,MTKK,Power Transmissions Capacity,2025,0.3
+ZS,MTKK,Power Transmissions Capacity,2030,0.3
+ZS,MTKK,Power Transmissions Capacity,2035,0.3
+ZS,MTKK,Power Transmissions Capacity,2040,0.3
+ZS,MTKK,Power Transmissions Capacity,2045,0.3
+ZS,MTKK,Power Transmissions Capacity,2050,0.3
+Thies,Dakar,Transmission Expansion Costs in MEUR/GW,2022,336.4
+Thies,Dakar,Transmission Expansion Costs in MEUR/GW,2025,336.4
+Thies,Dakar,Transmission Expansion Costs in MEUR/GW,2030,336.4
+Thies,Dakar,Transmission Expansion Costs in MEUR/GW,2035,336.4
+Thies,Dakar,Transmission Expansion Costs in MEUR/GW,2040,336.4
+Thies,Dakar,Transmission Expansion Costs in MEUR/GW,2045,336.4
+Thies,Dakar,Transmission Expansion Costs in MEUR/GW,2050,336.4
+Thies,Diourbel,Transmission Expansion Costs in MEUR/GW,2022,441.61199999999997
+Thies,Diourbel,Transmission Expansion Costs in MEUR/GW,2025,441.61199999999997
+Thies,Diourbel,Transmission Expansion Costs in MEUR/GW,2030,441.61199999999997
+Thies,Diourbel,Transmission Expansion Costs in MEUR/GW,2035,441.61199999999997
+Thies,Diourbel,Transmission Expansion Costs in MEUR/GW,2040,441.61199999999997
+Thies,Diourbel,Transmission Expansion Costs in MEUR/GW,2045,441.61199999999997
+Thies,Diourbel,Transmission Expansion Costs in MEUR/GW,2050,441.61199999999997
+Dakar,Thies,Transmission Expansion Costs in MEUR/GW,2022,336.4
+Dakar,Thies,Transmission Expansion Costs in MEUR/GW,2025,336.4
+Dakar,Thies,Transmission Expansion Costs in MEUR/GW,2030,336.4
+Dakar,Thies,Transmission Expansion Costs in MEUR/GW,2035,336.4
+Dakar,Thies,Transmission Expansion Costs in MEUR/GW,2040,336.4
+Dakar,Thies,Transmission Expansion Costs in MEUR/GW,2045,336.4
+Dakar,Thies,Transmission Expansion Costs in MEUR/GW,2050,336.4
+Diourbel,Thies,Transmission Expansion Costs in MEUR/GW,2022,441.61199999999997
+Diourbel,Thies,Transmission Expansion Costs in MEUR/GW,2025,441.61199999999997
+Diourbel,Thies,Transmission Expansion Costs in MEUR/GW,2030,441.61199999999997
+Diourbel,Thies,Transmission Expansion Costs in MEUR/GW,2035,441.61199999999997
+Diourbel,Thies,Transmission Expansion Costs in MEUR/GW,2040,441.61199999999997
+Diourbel,Thies,Transmission Expansion Costs in MEUR/GW,2045,441.61199999999997
+Diourbel,Thies,Transmission Expansion Costs in MEUR/GW,2050,441.61199999999997
+LS,Thies,Transmission Expansion Costs in MEUR/GW,2022,744.6039999999999
+LS,Thies,Transmission Expansion Costs in MEUR/GW,2025,744.6039999999999
+LS,Thies,Transmission Expansion Costs in MEUR/GW,2030,744.6039999999999
+LS,Thies,Transmission Expansion Costs in MEUR/GW,2035,744.6039999999999
+LS,Thies,Transmission Expansion Costs in MEUR/GW,2040,744.6039999999999
+LS,Thies,Transmission Expansion Costs in MEUR/GW,2045,744.6039999999999
+LS,Thies,Transmission Expansion Costs in MEUR/GW,2050,744.6039999999999
+FKK,Thies,Transmission Expansion Costs in MEUR/GW,2022,694.6659999999999
+FKK,Thies,Transmission Expansion Costs in MEUR/GW,2025,694.6659999999999
+FKK,Thies,Transmission Expansion Costs in MEUR/GW,2030,694.6659999999999
+FKK,Thies,Transmission Expansion Costs in MEUR/GW,2035,694.6659999999999
+FKK,Thies,Transmission Expansion Costs in MEUR/GW,2040,694.6659999999999
+FKK,Thies,Transmission Expansion Costs in MEUR/GW,2045,694.6659999999999
+FKK,Thies,Transmission Expansion Costs in MEUR/GW,2050,694.6659999999999
+Thies,LS,Transmission Expansion Costs in MEUR/GW,2022,744.6039999999999
+Thies,LS,Transmission Expansion Costs in MEUR/GW,2025,744.6039999999999
+Thies,LS,Transmission Expansion Costs in MEUR/GW,2030,744.6039999999999
+Thies,LS,Transmission Expansion Costs in MEUR/GW,2035,744.6039999999999
+Thies,LS,Transmission Expansion Costs in MEUR/GW,2040,744.6039999999999
+Thies,LS,Transmission Expansion Costs in MEUR/GW,2045,744.6039999999999
+Thies,LS,Transmission Expansion Costs in MEUR/GW,2050,744.6039999999999
+Thies,FKK,Transmission Expansion Costs in MEUR/GW,2022,694.6659999999999
+Thies,FKK,Transmission Expansion Costs in MEUR/GW,2025,694.6659999999999
+Thies,FKK,Transmission Expansion Costs in MEUR/GW,2030,694.6659999999999
+Thies,FKK,Transmission Expansion Costs in MEUR/GW,2035,694.6659999999999
+Thies,FKK,Transmission Expansion Costs in MEUR/GW,2040,694.6659999999999
+Thies,FKK,Transmission Expansion Costs in MEUR/GW,2045,694.6659999999999
+Thies,FKK,Transmission Expansion Costs in MEUR/GW,2050,694.6659999999999
+ZS,FKK,Transmission Expansion Costs in MEUR/GW,2022,1334.0
+ZS,FKK,Transmission Expansion Costs in MEUR/GW,2025,1334.0
+ZS,FKK,Transmission Expansion Costs in MEUR/GW,2030,1334.0
+ZS,FKK,Transmission Expansion Costs in MEUR/GW,2035,1334.0
+ZS,FKK,Transmission Expansion Costs in MEUR/GW,2040,1334.0
+ZS,FKK,Transmission Expansion Costs in MEUR/GW,2045,1334.0
+ZS,FKK,Transmission Expansion Costs in MEUR/GW,2050,1334.0
+MTKK,FKK,Transmission Expansion Costs in MEUR/GW,2022,1592.1
+MTKK,FKK,Transmission Expansion Costs in MEUR/GW,2025,1592.1
+MTKK,FKK,Transmission Expansion Costs in MEUR/GW,2030,1592.1
+MTKK,FKK,Transmission Expansion Costs in MEUR/GW,2035,1592.1
+MTKK,FKK,Transmission Expansion Costs in MEUR/GW,2040,1592.1
+MTKK,FKK,Transmission Expansion Costs in MEUR/GW,2045,1592.1
+MTKK,FKK,Transmission Expansion Costs in MEUR/GW,2050,1592.1
+FKK,ZS,Transmission Expansion Costs in MEUR/GW,2022,1334.0
+FKK,ZS,Transmission Expansion Costs in MEUR/GW,2025,1334.0
+FKK,ZS,Transmission Expansion Costs in MEUR/GW,2030,1334.0
+FKK,ZS,Transmission Expansion Costs in MEUR/GW,2035,1334.0
+FKK,ZS,Transmission Expansion Costs in MEUR/GW,2040,1334.0
+FKK,ZS,Transmission Expansion Costs in MEUR/GW,2045,1334.0
+FKK,ZS,Transmission Expansion Costs in MEUR/GW,2050,1334.0
+MTKK,ZS,Transmission Expansion Costs in MEUR/GW,2022,1655.842
+MTKK,ZS,Transmission Expansion Costs in MEUR/GW,2025,1655.842
+MTKK,ZS,Transmission Expansion Costs in MEUR/GW,2030,1655.842
+MTKK,ZS,Transmission Expansion Costs in MEUR/GW,2035,1655.842
+MTKK,ZS,Transmission Expansion Costs in MEUR/GW,2040,1655.842
+MTKK,ZS,Transmission Expansion Costs in MEUR/GW,2045,1655.842
+MTKK,ZS,Transmission Expansion Costs in MEUR/GW,2050,1655.842
+FKK,MTKK,Transmission Expansion Costs in MEUR/GW,2022,1592.1
+FKK,MTKK,Transmission Expansion Costs in MEUR/GW,2025,1592.1
+FKK,MTKK,Transmission Expansion Costs in MEUR/GW,2030,1592.1
+FKK,MTKK,Transmission Expansion Costs in MEUR/GW,2035,1592.1
+FKK,MTKK,Transmission Expansion Costs in MEUR/GW,2040,1592.1
+FKK,MTKK,Transmission Expansion Costs in MEUR/GW,2045,1592.1
+FKK,MTKK,Transmission Expansion Costs in MEUR/GW,2050,1592.1
+ZS,MTKK,Transmission Expansion Costs in MEUR/GW,2022,1655.842
+ZS,MTKK,Transmission Expansion Costs in MEUR/GW,2025,1655.842
+ZS,MTKK,Transmission Expansion Costs in MEUR/GW,2030,1655.842
+ZS,MTKK,Transmission Expansion Costs in MEUR/GW,2035,1655.842
+ZS,MTKK,Transmission Expansion Costs in MEUR/GW,2040,1655.842
+ZS,MTKK,Transmission Expansion Costs in MEUR/GW,2045,1655.842
+ZS,MTKK,Transmission Expansion Costs in MEUR/GW,2050,1655.842
+General,General,Transmission Expansion Costs in MEUR/GW/km,General,5.8

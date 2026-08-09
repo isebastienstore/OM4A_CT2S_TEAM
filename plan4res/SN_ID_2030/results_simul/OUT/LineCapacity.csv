@@ -1,0 +1,8 @@
+Name,MaxPowerFlow,MinPowerFlow
+Dakar>Thies,5000.0,-5000
+Diourbel>Thies,1000.0,-1000
+FKK>MTKK,500.0,-500
+FKK>Thies,3000.0,-3000
+FKK>ZS,500.0,-500
+LS>Thies,1000.0,-1000
+MTKK>ZS,300.0,-300

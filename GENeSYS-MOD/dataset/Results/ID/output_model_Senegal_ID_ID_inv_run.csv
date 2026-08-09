@@ -1,0 +1,3 @@
+Type,PathwayScenario,Pathway,Scenario,Value
+":Type => ""Objective Value""",":PathwayScenario => ""ID_ID""",":Pathway => ""ID""",":Scenario => ""ID""",:Value => 97775.67770324198
+":Type => ""Elapsed Time""",":PathwayScenario => ""ID_ID""",":Pathway => ""ID""",":Scenario => ""ID""",:Value => Dates.Millisecond(2518261)

@@ -1,0 +1,2 @@
+Name,Zone,HydroSystem,NumberUnits,MaxPower,MinPower,MaxVolume,MinVolume,Inflows,InflowsProfile,InitialVolume,TurbineEfficiency,PumpingEfficiency,AddPumpedStorage,VolumeRate
+Hydro|Reservoir,MTKK,0,1,200.0,0,730000.0,0,731078.5860959722,TS_HYDRO_AVG_MTKK_Manantali.csv,365000,1.0,0.0,0,3650

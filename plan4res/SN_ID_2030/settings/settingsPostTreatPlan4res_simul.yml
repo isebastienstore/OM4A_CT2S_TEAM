@@ -1,0 +1,304 @@
+# settings for PostTreatPlan4res.py
+
+# optional: dates on which to treat the output
+BeginTreatData: '02/07/2030 00:00'
+EndTreatData: '30/06/2031 23:00'
+
+# directories
+# dir: for reading results of plan4res : 
+Resultsdir: "results_simul/"
+# defines how results files are names (eg Demand$i.csv or Demand_Scen$i_OUT.csv for the demand at scenario $i_OUT
+ScenarioIdentifier: _Scen$i_OUT                                                                                                                
+
+# variables for defining which treatments  will be done
+map: no   # if True: maps will be created ; only possible if geopandas is available
+geopandas: yes # False if geopandas is not available; in that case , maps will be skiped
+private_map: 'OM4ATrainingMap.csv'
+
+# Treatments to be performed
+PostTreat:
+    DrawMean: False # (optional, default True) True if you wish to draw the average in the stochastic graphs 
+    Volume: 
+        read: yes  # reads volume outputs and create volume files to be used by 'draw' , 'latex' and 'iamc'
+        draw: yes  # create graphs
+        latex: no  # write latex chapter
+        iamc: yes  # convert outputs to openentrance format
+        Dir: 'Volume/'  # outputs of plan4res for Volumes are in dir/variant-option/Volume/  => files VolumeOUTi.csv
+        DrawMean: False # (optional, default True) True if you wish to draw the average in this specific stochastic graphs 
+    Flows: 
+        read: yes # reads flows outputs and create volume files to be used by 'draw' , 'latex' and 'iamc'
+        draw: yes
+        latex: no
+        iamc: yes
+        Dir: 'Flows/'
+    Power:
+        read: yes # reads volume outputs and create volume files to be used by 'draw' , 'latex', 'cmputecost' and 'iamc'
+        computecost: yes  # compute variable costs
+        draw: yes
+        latex: yes
+        iamc: yes
+        Dir: 'ActivePower/'
+    MarginalCost: 
+        read: yes # reads volume outputs and create volume files to be used by 'draw' , 'latex' and 'iamc'
+        draw: yes
+        latex: yes 
+        iamc: yes
+        update: yes  # compute "marginal cost" as the highest cost of started asset
+        Dir: 'MarginalCosts/'
+        max: 100
+    MarginalCostFlows:
+        read: yes # reads volume outputs and create volume files to be used by 'draw' , 'latex' and 'iamc'
+        draw: yes
+        latex: yes
+        iamc: yes
+        Dir: 'MarginalCosts/'
+    Demand:
+        read: yes # reads volume outputs and create volume files to be used by 'draw' , 'latex' and 'iamc'
+        draw: yes
+        latex: yes
+        iamc: yes
+        Dir: 'Demand/'
+    InstalledCapacity:
+        draw: yes  # read output files from dir/OUT and creates hraphs in dir/IMG
+        latex: yes # read output files in dir/OUT and graphs in dir/IMG and create a report in dir/Latex
+        iamc: yes  # read output files and convert them to open entrance format in dir/IAMC
+    SpecificPeriods: # optional - detailed treatments of specifis sub periods on specific scenarios
+        read: yes    
+        latex: yes
+        iamc: no
+        draw: yes
+        scenarios: [0] #subset of scenarios on which to perform detailed analysis on specific periods
+        periods:
+            summerweek:       
+                begin: '04/08/2030 00:00'
+                end: '10/08/2030 23:00'
+            winterweek:       
+                begin: '12/01/2031 00:00'
+                end: '18/01/2031 23:00'
+
+# dimensions of graphics
+Graphs:
+    Volume: 
+        nbcols: 4
+        nblines: 2
+        SizeCol: 50
+        SizeRow: 50
+        TitleSize: 50
+        LabelSize: 40
+    Power:
+        #treat: ['Hydro','Geothermal','Biomass','WindPower','Nuclear','PV','Hydrogen','Coal','Gaz','Oil'] # use if only a sublist of technos are in the graphs
+        nbcols: 4
+        nblines: 2
+        SizeCol: 50
+        SizeRow: 35
+        TitleSize: 50
+        LabelSize: 40
+        ChloroGraph:
+            nbcols: 4
+            nblines: 4
+            dpi: 50
+    MarginalCost: 
+        nbcols: 4
+        nblines: 2
+        SizeCol: 50
+        SizeRow: 35
+        TitleSize: 50
+        LabelSize: 40
+    MarginalCostFlows:
+        nbcols: 4
+        nblines: 2
+    Demand:
+        nbcols: 4
+        nblines: 2
+        SizeCol: 50
+        SizeRow: 35
+        TitleSize: 50
+        LabelSize: 40
+
+# name of scenario for the IAMC file
+scenario: 'toyDataset'
+model: 'plan4res v2.0'  # name of the model
+
+# name and title of the latex report
+namereport: 'toyDataset'
+titlereport: 'Report about toyDataset'
+
+# if bellman value is to be computed (file BellmanOUT.csv in inputs): yes, else: no
+usevu: yes
+# SSVTimeStep number in BellmanOUT.csv corresponding to plot_end
+timestepvusms: 26
+# figures are rounded: 1, not rounded: 0
+arrondi: 1
+# min share drawn in pie
+marginalcostlimits:
+    max: 10000
+    min: -10000
+pielimit: 0.001
+
+# information per technology:
+# color= hex code of the color to use for this technology
+# the following should be read from the data
+# cO2= cO2 cost per MWh for this technology
+# varcost= Variable cost Euro per MWh for this technology
+# startcost= Start-Up cost Euro
+
+Technos:
+    Geothermal:
+        color: '#8FA600'
+    Hydro|Run of River: 
+        color: '#74DBDA'
+    Nuclear:
+        color: '#FFAA00'
+    Coal|Hard coal|w/o CCS:
+        color: '#0D0D0D'
+    Coal|Hard coal|w/ CCS:  
+        color: '#4D4F4F'
+    Coal|Lignite|w/o CCS:
+        color: '#2F3030'
+    Wind|Offshore:
+        color: '#2BFF00'
+    Wind|Offshore|Deep:
+        color: '#2BFF00'
+    Wind|Offshore|Shallow:
+        color: '#2BFF00'
+    Wind|Offshore|Transitional:
+        color: '#2BFF00'
+    Wind|Onshore|Avg:
+        color: '#22CC00'
+    Wind|Onshore|Opt:
+        color: '#22CC00'
+    Wind|Onshore:
+        color: '#22CC00'
+    Solar|PV:
+        color: '#FFFF00'
+    Solar|PV|Utility:
+        color: '#FFFF00'
+    Solar|PV|Utility|Average:
+        color: '#FFFF00'
+    Solar|PV|Utility|Inf:
+        color: '#FFFF00'
+    Solar|PV|Utility|Opt:
+        color: '#FFFF00'
+    Solar|PV|Rooftop|Commercial:
+        color: '#FFFF00'
+    Solar|PV|Rooftop|Residential:
+        color: '#FFFF00'
+    Biomass|w/ CCS:
+        color: '#608000'
+    Biomass|w/o CCS:
+        color: '#608000'
+    Hydrogen|OCGT:
+        color: '#DF785B'
+    Gas|CCGT|w/ CCS:
+        color: '#FF0000'
+    Gas|CCGT|w/o CCS:
+        color: '#B30000'
+    Gas|OCGT|w/o CCS:
+        color: '#E00000'
+    Oil|w/o CCS:
+        color: '#4F0000'
+    Hydro|Reservoir:
+        color: '#0000FF'
+    Hydro|Pumped Storage:
+        color: '#3377FF'
+    Battery|Lithium-Ion:
+        color: '#D75BE1'
+    Battery|Redox Flow:
+        color: '#D75BE1'
+    Compressed Air:
+        color: '#BB16C7'
+    Electricity|Gas|Fossil|CCGT|w/o CCS:
+        color: '#B30000'
+    Electricity|Gas|Fossil|OCGT|w/o CCS:
+        color: '#E00000'
+    Electricity|Oil|w/o CCS:
+        color: '#4F0000'
+    SlackUnit:
+        color: '#FFFFFF'
+    Hydro|Pumped Storage_PUMP:
+        color: '#3377FF'
+    Battery|Lithium-Ion_PUMP:
+        color: '#E68F67'
+    Battery|Redox Flow_PUMP:
+        color: '#E68F67'
+    Compressed Air_PUMP:
+        color: '#E6847A'
+
+# aggregated technologies (for aggregated graphs)
+# for each aggr techno: list of technos and color codes 
+technosAggr:
+    Hydro:
+        technos: ['Hydro|Reservoir',  'Hydro|Pumped Storage', 'Hydro|Run of River']
+        color: blue
+        colors: Blues
+    Hydro_PUMP:
+        technos: ['Hydro|Pumped Storage_PUMP']
+        color: blue
+        colors: Blues
+    Geothermal: 
+        technos: ['Geothermal']
+        color: olive
+        colors: Greens
+    WindPower:
+        technos: ['Wind|Onshore','Wind|Onshore|Opt','Wind|Onshore|Avg','Wind|Offshore|Transitional','Wind|Offshore|Shallow', 'Wind|Offshore|Deep']
+        color: green
+        colors: Greens
+    PV:
+        technos: ['Solar|PV|Utility','Solar|PV|Utility|Average','Solar|PV|Utility|Inf','Solar|PV|Utility|Opt','Solar|PV|Rooftop|Commercial','Solar|PV|Rooftop|Residential']
+        color: yellow
+        colors: YlOrRd
+    Biomass: 
+        technos: ['Biomass|w/ CCS','Biomass|w/o CCS']
+        color: darkkhaki
+        colors: Greens
+    Nuclear:
+        technos: ['Nuclear']
+        color: orange
+        colors: Oranges
+    Hydrogen:
+        technos: ['Hydrogen|OCGT']
+        color: salmon
+        colors: RdPu
+    Coal:
+        technos: ['Coal|Hard coal|w/o CCS','Coal|Hard coal|w/ CCS','Coal|Lignite|w/o CCS']
+        color: black
+        colors: Greys
+    Gaz:
+        technos: ['Gas|CCGT|w/o CCS','Gas|CCGT|w/ CCS','Gas|OCGT|w/o CCS','Electricity|Gas|Fossil|CCGT|w/o CCS','Electricity|Gas|Fossil|OCGT|w/o CCS']
+        color: firebrick
+        colors: Reds
+    Battery: 
+        technos: ['Compressed Air','Lithium-Ion','Redox Flow']
+        color: magenta
+        colors: Purples
+    Battery_PUMP: 
+        technos: ['Compressed Air_PUMP','Lithium-Ion_PUMP','Redox Flow_PUMP']
+        color: magenta
+        colors: Purples
+    Oil:
+        technos: ['Oil|w/o CCS','Electricity|Oil|w/o CCS']
+        color: saddlebrown
+        colors: Greys
+    Non Served:
+        technos: ['SlackUnit']
+        color: blueviolet
+        colors: Purples
+        
+# lists of storage units
+# pumping=list of units with pumping capacity
+# nopumping=list of units without pumping capacity
+pumping: [ 'Hydro|Pumped Storage', 'Battery|Lithium-Ion']
+nopumping: [ 'Hydro|Reservoir' ]
+
+# specification of deterministic graphics for storages
+graphVolumes:
+    Reservoir: 
+        Name: 'Reservoir' # name of graph
+        Technos: ['Hydro|Reservoir'] # technos included
+    PumpedStorage: 
+        Name: 'Pumped Storage'
+        Technos: ['Hydro|Pumped Storage']
+    Battery: 
+        Name: 'Batteries'
+        Technos: ['Battery|Lithium-Ion']
+

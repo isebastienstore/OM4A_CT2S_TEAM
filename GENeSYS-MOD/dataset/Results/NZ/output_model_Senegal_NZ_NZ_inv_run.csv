@@ -1,0 +1,3 @@
+Type,PathwayScenario,Pathway,Scenario,Value
+":Type => ""Objective Value""",":PathwayScenario => ""NZ_NZ""",":Pathway => ""NZ""",":Scenario => ""NZ""",:Value => 97862.10068148359
+":Type => ""Elapsed Time""",":PathwayScenario => ""NZ_NZ""",":Pathway => ""NZ""",":Scenario => ""NZ""",:Value => Dates.Millisecond(19357190)

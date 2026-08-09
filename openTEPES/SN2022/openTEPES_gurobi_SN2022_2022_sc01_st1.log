@@ -1,0 +1,125 @@
+
+Gurobi 12.0.2 (linux64) logging started Fri May 15 15:54:56 2026
+
+Set parameter LogFile to value "/home/ahmany/om4a/openTEPESS/openTEPES/openTEPES/SN2022/openTEPES_gurobi_SN2022_2022_sc01_st1.log"
+Set parameter Method to value 2
+Set parameter Crossover to value -1
+Set parameter MIPGap to value 0.01
+Set parameter Threads to value 36
+Set parameter TimeLimit to value 36000
+Set parameter IterationLimit to value 36000000
+Gurobi Optimizer version 12.0.2 build v12.0.2rc0 (linux64 - "Ubuntu 24.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Silver 4214R CPU @ 2.40GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 24 physical cores, 48 logical processors, using up to 36 threads
+
+Non-default parameters:
+IterationLimit  36000000
+TimeLimit  36000
+MIPGap  0.01
+Method  2
+QCPDual  1
+Threads  36
+
+Optimize a model with 2524705 rows, 2724142 columns and 9606605 nonzeros
+Model fingerprint: 0x34a103c4
+Coefficient statistics:
+  Matrix range     [1e-05, 1e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [9e-06, 1e+03]
+  RHS range        [5e-04, 1e+00]
+Presolve removed 829935 rows and 877937 columns (presolve time = 5s)...
+Presolve removed 896090 rows and 891164 columns
+Presolve time: 10.11s
+Presolved: 1628615 rows, 1832978 columns, 6884121 nonzeros
+
+Ordering time: 1.69s
+
+Barrier statistics:
+ AA' NZ     : 1.002e+07
+ Factor NZ  : 1.775e+07 (roughly 1.2 GB of memory)
+ Factor Ops : 2.779e+08 (less than 1 second per iteration)
+ Threads    : 36
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   2.53813604e+09 -5.79826678e+08  2.14e+03 1.59e+00  2.19e+04    28s
+   1   6.82360973e+08 -2.10726302e+08  5.45e+02 7.94e-14  5.60e+03    29s
+   2   1.73463946e+08 -1.28545082e+08  1.38e+02 1.45e-13  1.44e+03    30s
+   3   3.72857835e+07 -9.08491357e+07  2.96e+01 1.46e-13  3.22e+02    31s
+   4   8.82684589e+06 -4.65082997e+07  6.85e+00 1.32e-13  7.83e+01    32s
+   5   2.53402509e+06 -1.95084891e+07  1.85e+00 1.16e-13  2.20e+01    32s
+   6   8.13113645e+05 -7.62065971e+06  5.22e-01 5.12e-13  6.42e+00    33s
+   7   1.38046261e+05 -2.62055407e+06  5.11e-02 1.16e-13  1.06e+00    33s
+   8   3.59802596e+04 -4.52471060e+05  3.79e-03 3.13e-13  1.37e-01    34s
+   9   1.65853229e+04 -1.10233822e+05  7.45e-04 9.31e-14  3.36e-02    35s
+  10   4.76360140e+03 -2.99479715e+04  5.93e-05 3.84e-14  9.09e-03    36s
+  11   2.55182791e+03 -1.02386278e+04  2.37e-05 2.84e-14  3.35e-03    36s
+  12   1.15451951e+03 -1.17810583e+03  1.04e-06 2.84e-14  6.10e-04    37s
+  13   8.83296633e+02  8.85841159e+01  1.64e-09 2.84e-14  2.08e-04    38s
+  14   7.51656964e+02  2.90562283e+02  4.19e-10 2.84e-14  1.21e-04    39s
+  15   7.20214157e+02  3.75455283e+02  3.14e-10 2.84e-14  9.02e-05    40s
+  16   6.79602937e+02  4.20331801e+02  1.99e-10 2.84e-14  6.78e-05    41s
+  17   6.47471604e+02  4.72542867e+02  1.20e-10 2.84e-14  4.58e-05    41s
+  18   6.20765963e+02  5.00205251e+02  5.70e-11 2.84e-14  3.15e-05    42s
+  19   6.07371943e+02  5.26324098e+02  2.18e-11 2.84e-14  2.12e-05    43s
+  20   6.03247996e+02  5.58469345e+02  1.06e-11 2.84e-14  1.17e-05    44s
+  21   6.01520396e+02  5.77466174e+02  7.72e-12 2.84e-14  6.29e-06    45s
+  22   6.00839349e+02  5.86175950e+02  1.27e-11 2.84e-14  3.84e-06    45s
+  23   6.00323421e+02  5.93727995e+02  1.56e-11 2.84e-14  1.73e-06    46s
+  24   6.00048242e+02  5.96709342e+02  1.95e-11 2.84e-14  8.73e-07    46s
+  25   5.99923031e+02  5.98001391e+02  2.62e-11 2.84e-14  5.03e-07    47s
+  26   5.99884865e+02  5.99082131e+02  2.64e-11 2.84e-14  2.10e-07    48s
+  27   5.99776527e+02  5.99481727e+02  9.07e-11 2.84e-14  7.71e-08    48s
+  28   5.99718167e+02  5.99562119e+02  3.70e-11 1.42e-14  4.08e-08    50s
+  29   5.99705625e+02  5.99584940e+02  8.13e-11 2.84e-14  3.16e-08    50s
+  30   5.99697404e+02  5.99636665e+02  9.85e-11 2.84e-14  1.59e-08    51s
+  31   5.99690213e+02  5.99663791e+02  5.57e-11 2.84e-14  6.91e-09    52s
+  32   5.99685007e+02  5.99674292e+02  4.61e-10 2.84e-14  2.80e-09    53s
+  33   5.99681980e+02  5.99679517e+02  6.44e-10 2.84e-14  6.44e-10    54s
+  34   5.99681183e+02  5.99680923e+02  2.02e-09 2.84e-14  6.82e-11    55s
+  35   5.99681052e+02  5.99681001e+02  3.08e-08 1.42e-14  1.34e-11    57s
+  36   5.99681030e+02  5.99681014e+02  4.47e-08 2.84e-14  4.23e-12    58s
+  37   5.99681029e+02  5.99681018e+02  6.49e-08 2.84e-14  2.73e-12    59s
+  38   5.99681020e+02  5.99681018e+02  2.83e-08 2.13e-14  4.71e-13    61s
+  39   5.99681019e+02  5.99681018e+02  1.62e-09 2.84e-14  2.22e-15    62s
+
+Barrier solved model in 39 iterations and 62.15 seconds (42.53 work units)
+Optimal objective 5.99681019e+02
+
+Crossover log...
+
+   60165 DPushes remaining with DInf 0.0000000e+00                65s
+   23503 DPushes remaining with DInf 0.0000000e+00                67s
+    2258 DPushes remaining with DInf 0.0000000e+00                70s
+       0 DPushes remaining with DInf 0.0000000e+00                74s
+
+    1944 PPushes remaining with PInf 1.2827470e-06                74s
+    1886 PPushes remaining with PInf 1.2827470e-06                76s
+       0 PPushes remaining with PInf 4.5297345e-04                77s
+
+  Push phase complete: Pinf 4.5297345e-04, Dinf 1.1723908e+00     78s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   59806    5.9968101e+02   0.000000e+00   1.172391e+00     79s
+   59845    5.9968102e+02   0.000000e+00   0.000000e+00     83s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+   27871 DPushes remaining with DInf 0.0000000e+00                86s
+    4781 DPushes remaining with DInf 0.0000000e+00                92s
+      43 DPushes remaining with DInf 0.0000000e+00                96s
+       0 DPushes remaining with DInf 0.0000000e+00                98s
+
+    1403 PPushes remaining with PInf 0.0000000e+00                98s
+       0 PPushes remaining with PInf 0.0000000e+00               102s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 5.7100382e-01    102s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   88914    5.9968102e+02   0.000000e+00   5.710038e-01    103s
+   88920    5.9968102e+02   0.000000e+00   0.000000e+00    108s
+
+Solved in 88920 iterations and 107.81 seconds (61.76 work units)
+Optimal objective  5.996810173e+02

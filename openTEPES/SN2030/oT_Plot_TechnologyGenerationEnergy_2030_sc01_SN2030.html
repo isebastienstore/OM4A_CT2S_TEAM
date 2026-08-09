@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "layer": [{"mark": {"type": "arc", "outerRadius": 240}, "encoding": {"color": {"field": "Technology", "legend": {"title": "Technology"}, "scale": {"scheme": "category20c"}, "type": "nominal"}, "theta": {"field": "%", "stack": true, "type": "quantitative"}}}, {"mark": {"type": "text", "radius": 340, "size": 15}, "encoding": {"color": {"field": "Technology", "legend": {"title": "Technology"}, "scale": {"scheme": "category20c"}, "type": "nominal"}, "text": {"field": "Label", "type": "nominal"}, "theta": {"field": "%", "stack": true, "type": "quantitative"}}}], "data": {"name": "data-47cd94501655ae486df4ae33bd8c303c"}, "height": 800, "resolve": {"scale": {"theta": "independent"}}, "width": 800, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-47cd94501655ae486df4ae33bd8c303c": [{"Technology": "P_Gas_CCGT", "level_0": 8867040, "GWh": 5290.5, "%": 43.1, "Label": "P_Gas_CCGT (43.1 %, 5290.5 GWh)"}, {"Technology": "P_Gas_OCGT", "level_0": 8867040, "GWh": 1709.5, "%": 13.9, "Label": "P_Gas_OCGT (13.9 %, 1709.5 GWh)"}, {"Technology": "P_Oil", "level_0": 8867040, "GWh": 2296.2, "%": 18.7, "Label": "P_Oil (18.7 %, 2296.2 GWh)"}, {"Technology": "RES_Hydro_Large", "level_0": 8867040, "GWh": 674.5, "%": 5.5, "Label": "RES_Hydro_Large (5.5 %, 674.5 GWh)"}, {"Technology": "RES_Hydro_Small", "level_0": 8867040, "GWh": 631.1, "%": 5.1, "Label": "RES_Hydro_Small (5.1 %, 631.1 GWh)"}, {"Technology": "RES_PV_Utility_Opt", "level_0": 8867040, "GWh": 940.0, "%": 7.7, "Label": "RES_PV_Utility_Opt (7.7 %, 940.0 GWh)"}, {"Technology": "RES_Wind_Onshore_Opt", "level_0": 8867040, "GWh": 738.7, "%": 6.0, "Label": "RES_Wind_Onshore_Opt (6.0 %, 738.7 GWh)"}]}};
+      var embedOpt = {"renderer": "svg", "mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

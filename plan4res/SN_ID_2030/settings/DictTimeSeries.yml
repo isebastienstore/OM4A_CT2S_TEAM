@@ -1,0 +1,31 @@
+ZV: 
+    Total: 
+        Dakar : TS_LOAD_Dakar.csv
+        Diourbel : TS_LOAD_Diourbel.csv
+        Thies : TS_LOAD_Thies.csv
+        LS : TS_LOAD_LS.csv
+        FKK : TS_LOAD_FKK.csv
+        ZS : TS_LOAD_ZS.csv
+        MTKK : TS_LOAD_MTKK.csv
+SS:
+    Inflows:
+        MTKK : TS_HYDRO_AVG_MTKK_Manantali.csv
+RES:
+    Solar|PV|Utility:
+        Dakar : TS_PV_OPT_Dakar.csv
+        Diourbel : TS_PV_OPT_Diourbel.csv
+        Thies : TS_PV_OPT_Thies.csv
+        LS : TS_PV_OPT_LS.csv
+        FKK : TS_PV_OPT_FKK.csv
+        ZS : TS_PV_OPT_ZS.csv
+        MTKK : TS_PV_OPT_MTKK.csv
+    Wind|Onshore:
+        Dakar : TS_WIND_ONSHORE_OPT_Dakar.csv
+        Diourbel : TS_WIND_ONSHORE_OPT_Diourbel.csv
+        Thies : TS_WIND_ONSHORE_OPT_Thies.csv
+        LS : TS_WIND_ONSHORE_OPT_LS.csv
+        FKK : TS_WIND_ONSHORE_OPT_FKK.csv
+        ZS : TS_WIND_ONSHORE_OPT_ZS.csv
+        MTKK : TS_WIND_ONSHORE_OPT_MTKK.csv
+    Hydro|Run of River:
+        MTKK : TS_HYDRO_ROR_MTKK.csv

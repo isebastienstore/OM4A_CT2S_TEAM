@@ -1,0 +1,34 @@
+{
+  "sources": {
+    "regions": "reg-senegal-regroupe.json",
+    "node_locations": "oT_Data_NodeLocation_SN2030.csv",
+    "node_zones": "oT_Dict_NodeToZone_SN2030.csv",
+    "generation": "oT_Data_Generation_SN2030.csv",
+    "network": "oT_Data_Network_SN2030.csv",
+    "demand": "oT_Data_Demand_SN2030.csv",
+    "generation_energy": "oT_Result_GenerationEnergy_SN2030.csv",
+    "ens": "oT_Result_NetworkENS_SN2030.csv",
+    "curtailment": "oT_Result_GenerationCurtailmentEnergy_SN2030.csv",
+    "flow": "oT_Result_NetworkFlowElecPerNode_SN2030.csv",
+    "generation_investment": "oT_Result_GenerationInvestment_SN2030.csv",
+    "network_investment": "oT_Result_NetworkInvestment_SN2030.csv",
+    "plant_inventory": "viz\\power_plants.csv"
+  },
+  "kpis": {
+    "scenario": "sc01",
+    "year": 2030,
+    "renewable_share_pct": 24.301518849229648,
+    "curtailment_gwh": 0.0,
+    "ens_gwh": 0.7479676671121265,
+    "peak_demand_mw": 1920.4862919839993,
+    "total_generation_gwh": 12280.469576355512,
+    "peak_loading_pct": 86.54155908954614
+  },
+  "crs": {
+    "source": "EPSG:4326",
+    "plot": "EPSG:32628"
+  },
+  "loading_definition": "max(abs(flow)) / (TTC * SecurityFactor)",
+  "line_width_definition": "95th-percentile absolute flow",
+  "documentation": "https://opentepes.readthedocs.io/en/latest/InputData.html"
+}

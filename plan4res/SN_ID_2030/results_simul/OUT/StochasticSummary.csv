@@ -1,0 +1,36 @@
+section,item,value
+generation_gwh,NaturalGaz,7275.935
+generation_gwh,Hydro,1768.491
+generation_gwh,Oil,1201.449
+generation_gwh,Solar,1010.155
+generation_gwh,WindPower,735.94
+generation_gwh,Non Served,1.365
+variable_cost_meur_by_region,Dakar,883.361
+variable_cost_meur_by_region,Thies,125.442
+variable_cost_meur_by_region,ZS,8.363
+variable_cost_meur_by_region,MTKK,4.564
+variable_cost_meur_by_region,FKK,0.162
+variable_cost_meur_by_region,Diourbel,0.0
+variable_cost_meur_by_region,LS,0.0
+variable_cost_meur_by_technology,Electricity|Gas|Fossil|CCGT|w/o CCS,482.54
+variable_cost_meur_by_technology,Electricity|Oil|w/o CCS,313.053
+variable_cost_meur_by_technology,Electricity|Gas|Fossil|OCGT|w/o CCS,212.648
+variable_cost_meur_by_technology,SlackUnit,13.652
+variable_cost_meur_by_technology,Hydro|Reservoir,0.0
+variable_cost_meur_by_technology,Solar|PV|Utility,0.0
+variable_cost_meur_by_technology,Wind|Onshore,0.0
+variable_cost_meur_by_technology,Hydro|Run of River,0.0
+mean_slack_mwh,Dakar,37.058
+positive_slack_hours_across_scenarios,Dakar,7
+mean_slack_mwh,Diourbel,0.0
+positive_slack_hours_across_scenarios,Diourbel,0
+mean_slack_mwh,FKK,16.165
+positive_slack_hours_across_scenarios,FKK,3
+mean_slack_mwh,LS,0.0
+positive_slack_hours_across_scenarios,LS,0
+mean_slack_mwh,MTKK,443.227
+positive_slack_hours_across_scenarios,MTKK,89
+mean_slack_mwh,Thies,38.991
+positive_slack_hours_across_scenarios,Thies,7
+mean_slack_mwh,ZS,829.725
+positive_slack_hours_across_scenarios,ZS,170
